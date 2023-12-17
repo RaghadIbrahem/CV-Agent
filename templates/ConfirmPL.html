@@ -1,0 +1,97 @@
+{% extends 'baseOutSB.html'%}
+{% block title %}
+   Confirm
+{% endblock %}
+
+{% block content %}
+<h5>By confirming the list, CV-Agent will send the applicant initial acceptance or rejection emails based on your arrangement.</h5>
+<h2>Are you sure you want to confirm the list?</h2>
+<input class="modifyBtn" type="button" onclick="window.location.href='{{ url_for('PL')}}';" value="modify list">
+<input class="conBtn" type="button" onclick="redirect()" value="confirm to send emails">
+<div class="thanks thanks-hidden"></div>
+<style>
+    *{
+      text-align: center;
+      font-family: Times;
+    }
+    h2{
+    color: red;
+    text-align: center;
+    font-family: Andalus;
+    font-size: 40px;
+    position:relative;
+    top: 200px;
+    }
+    h5{
+    font-family: Baguet Script;
+    position:relative;
+    top: 205px;
+    }
+    .bi-check2-all{
+    color: pink;
+    position:relative;
+    left: 650px;
+    }
+      .modifyBtn{
+       float: left;
+       margin: auto;
+       font-size: 1.2rem;
+       border: none;
+       border-radius: 10px;
+       width: 16%;
+       height: 40px;
+       padding: 5px 10px;
+       color: #FFF;
+       background: #A1C7C8;
+       display: block;
+       position:relative;
+       right: -430px;
+       top: 200px;
+      }
+      .conBtn{
+       float: right;
+       margin: auto;
+       font-size: 1.2rem;
+       border: none;
+       border-radius: 10px;
+       width: 16%;
+       height: 40px;
+       padding: 5px 10px;
+       color: #FFF;
+       background: #A1C7C8;
+       display: block;
+       position:relative;
+       right: 430px;
+       top: 200px;
+      }
+      .thanks {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #FFF;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.thanks:after {
+  content: "Emails have been sent successfully";
+}
+
+.thanks-hidden {
+  display: none;
+}
+</style>
+<script>
+function redirect() {
+  document.querySelector('.thanks').classList.remove('thanks-hidden');
+  setTimeout(() => {
+    window.location.href = "{{ url_for('Account')}}";
+  }, 3000); // Wait 3 seconds and then redirect.
+}
+</script>
+{% endblock %}

@@ -1,0 +1,169 @@
+
+
+{% extends 'baseA.html'%}
+{% block title %}
+CV Submission
+{% endblock %}
+{% block content %}
+
+<form id="contact-form"  name="contact" data-netlify="true" data-netlify-recaptcha="true" method = "POST" >
+
+<div class="container-lg">
+  <div class="table-responsive">
+      <div class="table-wrapper">
+          <div class="table-title">
+            <h4><u>CV pdf </u></h4>
+              <div class="row">
+                  <div class="col-sm-8">
+                  <div class="col-sm-4">
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% for row in rows %}
+          <table class="table table-bordered">
+
+                <tr>
+                      <th>cv#</th>
+                      <th>PDF</th>
+                    </tr>
+
+
+                   {% set i=loop.index%}
+
+                  <tr><td>{{i}}</td>
+                    <td><a target="_blank" alt="" title="CV" href="uploads/{{row[1]}}" class="btn btn-success btn-block">View CV{{row[0]}}</a></tr>
+
+
+                    </td>
+              {% endfor %}
+
+          </table>
+
+      </div>
+  </div>
+</div>
+</form>
+<style>
+   h4{
+    position:relative;
+    left: 50px;
+    top: -20px;
+    right:70px;
+
+
+   }
+  h2{
+   color: red;
+   font-family: 'Times';
+   font-size: 23px;
+    position:fixed;
+    right: 1114px;
+    top: 280px;
+  }
+     input{
+    position:fixed;
+    left: 50px;
+    top: 315px;
+   }
+     .table-wrapper {
+      width: 700px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  }
+  .table-title {
+      padding-bottom: 10px;
+      margin: 0 0 10px;
+  }
+  .table-title h2 {
+      margin: 6px 0 0;
+      font-size: 22px;
+  }
+
+	table.table td .btn.manage {
+		padding: 2px 10px;
+		background: #37BC9B;
+		color: #fff;
+		border-radius: 2px;
+	}
+	table.table td .btn.manage:hover {
+		background: #2e9c81;
+	}
+  table.table-bordered th{
+    width: 250px;
+    height: 10px;
+
+  }
+
+</style>
+<script>
+$(document).ready(function(){
+	$(".btn-group .btn").click(function(){
+		var inputValue = $(this).find("input").val();
+		if(inputValue != 'all'){
+			var target = $('table tr[data-status="' + inputValue + '"]');
+			$("table tbody tr").not(target).hide();
+			target.fadeIn();
+		} else {
+			$("table tbody tr").fadeIn();
+		}
+	});
+	// Changing the class of status label to support Bootstrap 4
+    var bs = $.fn.tooltip.Constructor.VERSION;
+    var str = bs.split(".");
+    if(str[0] == 4){
+        $(".label").each(function(){
+        	var classStr = $(this).attr("class");
+            var newClassStr = classStr.replace(/label/g, "badge");
+            $(this).removeAttr("class").addClass(newClassStr);
+        });
+    }
+});
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+  var actions = $("table td:last-child").html();
+  // Append table with add row form on add new button click
+
+      $("table").append(row);
+    $("table tbody tr").eq(index + 1).find(".add, .edit").toggle();
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+  // Add row on add button click
+  $(document).on("click", ".add", function(){
+    var empty = false;
+    var input = $(this).parents("tr").find('input[type="text"]');
+        input.each(function(){
+      if(!$(this).val()){
+        $(this).addClass("error");
+        empty = true;
+      } else{
+                $(this).removeClass("error");
+            }
+    });
+    $(this).parents("tr").find(".error").first().focus();
+    if(!empty){
+      input.each(function(){
+        $(this).parent("td").html($(this).val());
+      });
+      $(this).parents("tr").find(".add, .edit").toggle();
+      $(".add-new").removeAttr("disabled");
+    }
+    });
+  // Edit row on edit button click
+  $(document).on("click", ".edit", function(){
+        $(this).parents("tr").find("td:not(:last-child)").each(function(){
+      $(this).html('<input type="text" class="form-control" value="' + $(this).text() + '">');
+    });
+    $(this).parents("tr").find(".add, .edit").toggle();
+    $(".add-new").attr("disabled", "disabled");
+    });
+  // Delete row on delete button click
+  $(document).on("click", ".delete", function(){
+        $(this).parents("tr").remove();
+    $(".add-new").removeAttr("disabled");
+    });
+
+  </script>
+{% endblock %}

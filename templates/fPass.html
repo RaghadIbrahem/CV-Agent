@@ -1,0 +1,102 @@
+{% extends 'baseRS.html'%}
+{% block title %}
+   Reset Password
+{% endblock %}
+
+{% block content %}
+   <h1>Forgot Password</h1>
+    <h5>New Password</h5> <!-- Optional JavaScript; choose one of the two! -->
+    <div class ="container">
+<form action="" method="post">
+    <div class="inputgroup">
+    <h6>EMAIL:</h6>
+    <input type="text" placeholder="enter email" name="enter email" maxlength="30"/>
+    </div>
+   </form>
+    </div>
+<input class="resetPassword" type="button" onclick="redirect()" value="reset password">
+<div class="thanks thanks-hidden"></div>
+  <style>
+      body {
+        background-color: #FFFFFF;
+        color: #8F8E8E
+      }
+      * {
+      text-align: center;
+      font-family: Times;
+      }
+      h6{
+        color: #4D4C4C;
+        text-align: left;
+      }
+      input{
+        text-align: center;
+      }
+      .container{
+      text-align: center;
+      width: 400px;
+      min-height: 400px;
+      background-color: #FFFFFF;
+      padding: 40px 40px;
+      text-align: left;
+      font-family: poppins medium;
+      }
+      .inputgroup input{
+       width: 100%;
+       height: 40px;
+       margin-bottom:12px;
+       background: #ECECEC;
+       border: 1px black;
+       border-radius: 2px;
+      }
+      ::placeholder{
+      color: gray;
+      text-align: left;
+      }
+          .resetPassword{
+       float: right;
+       margin: auto;
+       font-size: 1.2rem;
+       border: none;
+       border-radius: 10px;
+       width: 13%;
+       height: 40px;
+       padding: 5px 10px;
+       color: #FFF;
+       background: #A1C7C8;
+       display: block;
+       position:relative;
+       right: 46rem;
+       top: -16rem;
+      }
+      .thanks {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #FFF;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.thanks:after {
+  content: "Open your email to reset the password";
+}
+
+.thanks-hidden {
+  display: none;
+}
+  </style>
+<script>
+function redirect() {
+  document.querySelector('.thanks').classList.remove('thanks-hidden');
+  setTimeout(() => {
+    window.location.href = "{{ url_for('log')}}";
+  }, 5000); // Wait 3 seconds and then redirect.
+}
+</script>
+{% endblock %}

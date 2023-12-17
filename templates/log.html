@@ -1,0 +1,95 @@
+{% extends 'baseRS.html'%}
+{% block title %}
+   Login
+{% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+      {% for message in messages %}
+           <p>{{ message }}</p>
+      {% endfor %}
+{% endif %}
+{% endwith %}
+{% if error %}
+      {% for errors in error %}
+          <p>{{ errors }}</p>
+      {% endfor %}
+{% endif %}
+
+    <h1>Login</h1>
+    <h5>Sign in to continue </h5>
+   <div class="container">
+    <form action = "/log" method="post">
+        <div class="login">
+      <div class="inputgroup">
+        <h6>EMAIL:</h6>
+        <input type="text" placeholder="Enter Username" id="username" name="name" required>
+      </div>
+      <div class="inputgroup">
+        <h6>PASSWORD:</h6>
+        <input type="text" placeholder="Enter Password" id="Password" name="passw" required>
+      </div>
+      <br>
+            <p>Forgot password? <a href="{{ url_for('fPass') }}">reset password</a>.</p>
+      <input class="logInBtn" type="submit" onclick="return IsEmpty();" onclick="window.location.href='{{ url_for('Account')}}';" value="login">
+   </div>
+
+        </form>
+</div>
+<style>
+    *{
+      text-align: center;
+      font-family: Times;
+    }
+    h6{
+    color: #4D4C4C;
+    text-align: left;
+    }
+    input{
+    text-align: center;
+    }
+    .container{
+    text_align: center;
+    width: 400px;
+    min-height: 400px;
+    background-color: #FFFFFF
+    padding: 40px 40px;
+    text-align: left
+    font-family: poppins medium;
+    }
+    .inputgroup input{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 12px;
+    background: #ECECEC;
+    border: 1px black;
+    border-radius: 2px;
+    }
+    ::placeholder{
+    color: gray;
+    text-align: left;
+    }
+   .logInBtn{
+    margin: auto;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    width: 40%;
+    height: 40%;
+    padding: 5px 10px;
+    color: #FFF;
+    background: #A1C7C8;
+    display: block;
+    }
+
+</style>
+<script type="text/javascript">
+  function IsEmpty() {
+    if (document.forms['username'].value === "" || document.forms['Password'].value === "") {
+      alert("fill in your username and password");
+      return false;
+    }
+    return true;
+  }
+</script>
+{% endblock %}

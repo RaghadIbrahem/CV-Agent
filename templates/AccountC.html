@@ -1,0 +1,54 @@
+{% extends 'baseRS.html'%}
+{% block title %}
+   Create Account
+{% endblock %}
+
+{% block content %}
+<h2>Your account has been created successfully</h2>
+<h5>Please login to start using CV-Agent</h5>
+<i class="bi bi-check2-all"></i>
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor" class="bi bi-check2-all" viewBox="0 0 16 16">
+  <path d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0l7-7zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0z"/>
+  <path d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708z"/>
+</svg>
+<input class="logInBtn" type="button" onclick="window.location.href='{{ url_for('log')}}';" value="login">
+<style>
+    *{
+      text-align: center;
+      font-family: Times;
+    }
+    h2{
+    color: #a1c7c8;
+    text-align: center;
+    font-family: Andalus;
+    font-size: 40px;
+    position:relative;
+    top: 200px;
+    }
+    h5{
+    font-family: Baguet Script;
+    position:relative;
+    top: 205px;
+    }
+    .bi-check2-all{
+    color: pink;
+    position:relative;
+    left: 640px;
+    }
+   .logInBtn{
+    margin: auto;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    width: 9%;
+    height: 40%;
+    padding: 5px 10px;
+    color: #FFF;
+    background: #A1C7C8;
+    display: block;
+    position:relative;
+       right: 5px;
+       top: 130px;
+    }
+</style>
+{% endblock %}

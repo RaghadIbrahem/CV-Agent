@@ -1,0 +1,67 @@
+{% extends 'base.html'%}
+{% block title %}
+   Set Up Position Details
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<i class="bi bi-folder-plus"></i>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="130" onclick="window.location.href='{{ url_for('SetPD')}}';" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
+  <path d="m.5 3 .04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2zm5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672z"/>
+  <path d="M13.5 10a.5.5 0 0 1 .5.5V12h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V13h-1.5a.5.5 0 0 1 0-1H13v-1.5a.5.5 0 0 1 .5-.5z"/>
+</svg>
+<i class="bi bi-folder-plus"></i>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="130" onclick="window.location.href='{{ url_for('UseEP')}}';" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
+  <path d="m.5 3 .04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2zm5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672z"/>
+  <path d="M13.5 10a.5.5 0 0 1 .5.5V12h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V13h-1.5a.5.5 0 0 1 0-1H13v-1.5a.5.5 0 0 1 .5-.5z"/>
+</svg>
+<div class="main">
+    <h2><u>SET UP POSITIONS DETAILS</u></h2>
+    <h5>Add new position</h5>
+    <h6>Use existed position</h6>
+</div>
+</div>
+<style>
+*{
+font-family: Times;
+}
+    .container{
+    text_align: center;
+    width: 605px;
+    height: 100px;
+    background-color: #FFFFFF
+    padding: 40px 40px;
+    text-align: left
+    font-family: poppins medium;
+    position: relative;
+    right: 350px;
+    top: 32px;
+    }
+   h2{
+    position:relative;
+    left: 190px;
+    top: -110px;
+   }
+   .bi-folder-plus{
+    position:relative;
+    left: 350px;
+    top: 80px;
+    }
+      h6{
+  font-family: 'Times';
+   font-size: 13px;
+    text-align: center;
+    position:relative;
+    right: -195px;
+    top: 10px;
+  }
+    h5{
+  font-family: 'Times';
+   font-size: 13px;
+    text-align: center;
+    position:relative;
+    right: -55px;
+    top: 33px;
+  }
+</style>
+{% endblock %}

@@ -1,0 +1,189 @@
+{% extends 'baseOutSB.html'%}
+{% block title %}
+   candidate List
+{% endblock %}
+
+{% block content %}
+
+     <h1>CANDIDATES LIST</h1>
+<div class="container-lg">
+  <div class="table-responsive">
+      <div class="table-wrapper">
+          <div class="table-title">
+              <div class="row">
+                  <div class="col-sm-8">
+                  <div class="col-sm-4">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <table class="table table-bordered">
+              <thead>
+
+                  <tr>
+                      <th>Candidate Name</th>
+                      <th>Candidate Score</th>
+                      <th>Candidate CV</th>
+                  </tr>
+              </thead>
+              <tbody>
+                {% for row in rows %}
+                  <tr>
+
+
+                    <td>{{row[3]}}</td>
+                    <td>{{row[2]}}</td>
+
+
+
+                    <td>
+                <a target="_blank" alt="" title="CV" href="/{{row[4]}}">REVIEW pdf{{row[0]}}</a>
+
+
+
+
+                      <a target="_blank" alt="" title="CV" href="createCV/{{row[0]}}">REVIEW CV{{row[0]}}</a>
+
+
+
+
+                    </td>
+                </tr>
+
+
+                {% endfor %}
+
+
+              </tbody>
+          </table>
+
+      </div>
+  </div>
+     <input class="nextBtn" type="button" onclick="window.location.href='{{ url_for('ActiveP')}}';" value="Back"/>
+</div>
+<style>
+    *{
+      text-align: center;
+      font-family: Times;
+    }
+    h6{
+    color: #4D4C4C;
+    text-align: left;
+    }
+
+    	table.table td .btn.manage {
+		padding: 2px 10px;
+		background: #37BC9B;
+		color: #fff;
+		border-radius: 2px;
+	}
+	table.table td .btn.manage:hover {
+		background: #2e9c81;
+	}
+    .th1{
+    margin: auto;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    width: 40%;
+    height: 40%;
+    padding: 5px 10px;
+    color: #FFF;
+    background: #A1C7C8;
+    display: block;
+    }
+        tr{
+          text-align: center;
+   font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    width: 30%;
+    height: 40px;
+    padding: 5px 5px;
+    }
+            .td{
+
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    width:  64%;
+    height: 20px;
+    padding: 5px 10px;
+    }
+   .th1{
+    margin: auto;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    width: 40%;
+    height: 40px;
+    padding: 5px 10px;
+    color: #FFF;
+    background: #A1C7C8;
+    display: block;
+    }
+   tr {
+
+    text-align: center;
+       }
+      .nextBtn{
+       float: left;
+       margin: auto;
+       font-size: 1.2rem;
+       border: none;
+       border-radius: 10px;
+       width: 20%;
+       height: 40px;
+       padding: 5px 10px;
+       color: #FFF;
+       background: #A1C7C8;
+       display: block;
+       position: relative;
+       left: 450px;
+      }
+       .ConfirmList{
+    margin: auto;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    width: 20%;
+    height: 40%;
+    padding: 5px 10px;
+    color: #FFF;
+    background: #A1C7C8;
+    display: block;
+    }
+	table.table td .btn.manage {
+		padding: 2px 10px;
+		background: #37BC9B;
+		color: #fff;
+        border-radius: 2px;
+    }
+</style>
+<script>
+$(document).ready(function(){
+	$(".btn-group .btn").click(function(){
+		var inputValue = $(this).find("input").val();
+		if(inputValue != 'all'){
+			var target = $('table tr[data-status="' + inputValue + '"]');
+			$("table tbody tr").not(target).hide();
+			target.fadeIn();
+		} else {
+			$("table tbody tr").fadeIn();
+		}
+	});
+	// Changing the class of status label to support Bootstrap 4
+    var bs = $.fn.tooltip.Constructor.VERSION;
+    var str = bs.split(".");
+    if(str[0] == 4){
+        $(".label").each(function(){
+        	var classStr = $(this).attr("class");
+            var newClassStr = classStr.replace(/label/g, "badge");
+            $(this).removeAttr("class").addClass(newClassStr);
+        });
+    }
+});
+  </script>
+
+{% endblock %}

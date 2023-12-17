@@ -1,0 +1,86 @@
+{% extends 'baseRS.html'%}
+{% block title %}
+   Create Account
+{% endblock %}
+
+{% block content %}
+    <h1>Create New Account</h1>
+    <p>Already have an account? <a href="{{ url_for('log') }}">Login</a>.</p>
+   <div class="container">
+    <form name="cA" action = "{{ url_for('addrec') }}" onsubmit="return validateForm()" method = "POST">
+      <div class="inputgroup">
+        <h6>USERNAME:</h6>
+        <input type="text" placeholder="Enter username" name="username" minlength="4" maxlength="15" required>
+      </div>
+      <div class="inputgroup">
+        <h6>EMAIL:</h6>
+        <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com" required>
+      </div>
+      <div class="inputgroup">
+        <h6>PASSWORD:</h6>
+        <input type="text" placeholder="Enter password" name="Password" minlength="9" maxlength="12" required>
+      </div>
+      <div class="inputgroup">
+        <h6>CONFIRM PASSWORD:</h6>
+        <input type="text" placeholder="Confirm Password" name="Confirm password" required>
+      </div>
+      <br>
+      <input class="signUpBtn" type="submit" value="sign up">
+    </form>
+   </div>
+<style>
+    *{
+      text-align: center;
+      font-family: Times;
+    }
+    h6{
+    color: #4D4C4C;
+    text-align: left;
+    }
+    input{
+    text-align: center;
+    }
+    .container{
+    text_align: center;
+    width: 400px;
+    min-height: 400px;
+    background-color: #FFFFFF
+    padding: 40px 40px;
+    text-align: left
+    font-family: poppins medium;
+    }
+    .inputgroup input{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 12px;
+    background: #ECECEC;
+    border: 1px black;
+    border-radius: 2px;
+    }
+    ::placeholder{
+    color: gray;
+    text-align: left;
+    }
+   .signUpBtn{
+    margin: auto;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    width: 30%;
+    height: 40%;
+    padding: 5px 10px;
+    color: #FFF;
+    background: #A1C7C8;
+    display: block;
+    }
+</style>
+<script>
+function validateForm() {
+  let x = document.forms["cA"]["Confirm password"].value;
+  if (x != document.forms["cA"]["Password"].value) {
+    alert("Confirm password does not match the password");
+    return false;
+  }
+}
+</script>
+{% endblock %}

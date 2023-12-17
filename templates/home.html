@@ -1,0 +1,73 @@
+{% extends 'baseRS.html'%}
+{% block title %}
+   home
+{% endblock %}
+
+{% block content %}
+<section class="header">
+    <div class="container">
+     <div class="row banner">
+         <div class="col-md-6">
+             <h1>Hire the best employees <br> with CV-Agent</h1>
+             <br>
+              <h2>CV-Agent uses Artificial Intelligence to help you <br> find the ideal employees in record time </br> with less effort... </h2>
+             <input class="nextBtn" type="button" onclick="window.location.href='{{ url_for('Create_account')}}';" value="Get Started"/>
+             </div>
+          <div class="col-md-6 text-center">
+              <br>
+              <img src="https://cdn.shrm.org/image/upload/c_crop%2ch_705%2cw_1254%2cx_0%2cy_68/c_fit%2cf_auto%2cq_auto%2cw_767/v1/Legal%20and%20Compliance/job_applicant2m_f1u0wq?databtoa=eyIxNng5Ijp7IngiOjAsInkiOjY4LCJ4MiI6MTI1NCwieTIiOjc3MywidyI6MTI1NCwiaCI6NzA1fX0%3d" class="img-fluid img-thumbnail" >
+     </div>
+        </div>
+</section>
+   <style>
+   *{
+      text-align: center;
+      font-family: Times;
+    }
+.container{
+  width: 150%;
+  height: 90vh;
+  background: linear-gradient(
+    to right,
+    #a1c7c8 40%,
+    #a1c7c8 0%,
+    white 60%,
+    white 100%
+  );
+}
+   h1{
+       color: black;
+       font-family: Andalus;
+       font-size: 50px;
+       text-align: center;
+       position:relative;
+       right: 10px;
+       top: 60px;
+   }
+      h2{
+      color: black;
+       font-family: Andalus;
+       font-size: 25px;
+       text-align: center;
+       position:relative;
+       right: 10px;
+       top: 50px;
+   }
+      .nextBtn{
+        float: left;
+       margin: auto;
+       font-size: 1.2rem;
+       border: none;
+       border-radius: 10px;
+       width: 40%;
+       height: 40px;
+       padding: 5px 10px;
+       color: blck;
+       background: #ECECEC;
+       display: block;
+       position:relative;
+       right: -140px;
+       top: 60px;
+      }
+   </style>
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends 'baseA.html'%}
+{% block title %}
+   CV-Agent
+{% endblock %}
+{% block content %}
+<section class="header">
+    <div class="container">
+            <div class="row banner">
+         <div class="col-md-6">
+             <br>
+             <h1>Fill form or Upload your CV to apply</h1>
+             <input class="formBtn" type="button" onclick="window.location.href='{{ url_for('ApF1')}}';" value="Fill Form"/>
+             <input class="cvBtn" type="button" onclick="window.location.href='{{ url_for('UploadCV')}}';" value="Upload CV"/>
+          <p class="fst-italic">Best Wishes</p>
+             </div>
+       <div class="col-md-6 text-center">
+           <br>
+              <img src="https://www.livecareer.com/wp-content/uploads/2020/04/11-tips-for-mastering-online-job-applications.jpg" class="img-fluid img-thumbnail" >
+          </div>
+     </div>
+        </div>
+</section>
+   <style>
+   *{
+   font-family: Times;
+   }
+.container{
+  width: 150%;
+  height: 90vh;
+  background: linear-gradient(
+    to right,
+    #a1c7c8 40%,
+    #a1c7c8 0%,
+    white 60%,
+    white 100%
+  );
+}
+   h1{
+       color: white;
+       font-family: Andalus;
+       font-size: 50px;
+       text-align: center;
+       position:relative;
+       right: 10px;
+       top: 60px;
+   }
+      .formBtn{
+       float: left;
+       margin: auto;
+       font-size: 1.2rem;
+       border: none;
+       border-radius: 10px;
+       width: 40%;
+       height: 40px;
+       padding: 5px 10px;
+       color: blck;
+       background: #ECECEC;
+       display: block;
+       position:relative;
+       right: -42px;
+       top: 85px;
+      }
+      .cvBtn{
+       float: left;
+       margin: auto;
+       font-size: 1.2rem;
+       border: none;
+       border-radius: 10px;
+       width: 40%;
+       height: 40px;
+       padding: 5px 10px;
+       color: blck;
+       background: #ECECEC;
+       display: block;
+       position:relative;
+       right: -58px;
+       top: 85px;
+      }
+      p{
+      color: black;
+       font-family: Andalus;
+       font-size: 40px;
+       text-align: center;
+       position:fixed;
+       left: 300px;
+       top: 360px;
+      }
+   </style>
+{% endblock %}

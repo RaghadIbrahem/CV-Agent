@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+   <body>
+
+   <table border = 1>
+         <thead>
+            <td>ID</td>
+            <td>name</td>
+            <td>email</td>
+            <td>jobTitle</td>
+            <td>phoneNum</td>
+            <td>addr</td>
+            <td>linkedIn</td>
+            <td>twitter</td>
+            <td>univercityOrSchool</td>
+            <td>degree</td>
+            <td>major</td>
+            <td>GPA</td>
+            <td>startDate</td>
+            <td>endDate</td>
+            <td>certField</td>
+            <td>certScore</td>
+            <td>job Title</td>
+            <td>company</td>
+            <td>EYears</td>
+            <td>funOrAch</td>
+            <td>hSkill</td>
+            <td>language</td>
+            <td>lanLevel</td>
+            <td>course</td>
+            <td>startDate</td>
+            <td>endDate</td>
+            <td>couAch</td>
+            <td>perAch</td>
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["id"]}}</td>
+               <td>{{row["name"]}}</td>
+               <td>{{row["email"]}}</td>
+               <td>{{row["jobT"]}}</td>
+               <td>{{row["phoneNum"]}}</td>
+               <td>{{row["addr"]}}</td>
+               <td>{{row["linkedIn"]}}</td>
+               <td> {{ row["twitter"]}}</td>
+               <td>{{row["uniOrSc"]}}</td>
+               <td>{{row["degree"]}}</td>
+               <td>{{row["major"]}}</td>
+               <td>{{row["GPA"]}}</td>
+               <td>{{row["sDate"]}}</td>
+               <td>{{row["eDate"]}}</td>
+               <td> {{ row["certField"]}}</td>
+               <td> {{ row["certScore"]}}</td>
+               <td>{{row["jT"]}}</td>
+               <td>{{row["company"]}}</td>
+               <td>{{row["EYeras"]}}</td>
+               <td>{{row["funAch"]}}</td>
+               <td>{{row["hSkill"]}}</td>
+               <td>{{row["lan"]}}</td>
+               <td>{{row["lanLe"]}}</td>
+               <td>{{row["course"]}}</td>
+               <td>{{row["startD"]}}</td>
+               <td>{{row["endD"]}}</td>
+               <td>{{row["couAch"]}}</td>
+               <td>{{row["perAch"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+
+      <a href = "/">Go back to home page</a>
+
+   </body>
+</html>

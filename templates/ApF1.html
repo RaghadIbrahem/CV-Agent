@@ -1,0 +1,1924 @@
+{% extends 'baseA.html'%}
+{% block title %}
+   Application Form
+{% endblock %}
+
+{% block content %}
+<h1 xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">Application Form</h1>
+<p>Fill all the required section to complete your application</p>
+<form action = "{{ url_for('addrec1') }}" method="POST">
+<div class="container">
+    <div class="inputgroup">
+      <h5>PERSONAL INFORMATION</h5>
+      <hr/>
+          <h6>Full Name:</h6>
+        <input type="text" placeholder="Enter your name" name="fullName" required>
+         <h6>Email:</h6>
+         <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com" required>
+      </div>
+          <div class="inputgroup">
+    <h6>Job Title Or Qualification:</h6>
+ <select class="form-select" id="multiple-select-field1" data-placeholder="Choose job title" name="job" required>
+    <option value="none">None</option>
+    <option value="ABA Therapist">ABA Therapist</option>
+    <option value="ABAP Developer">ABAP Developer</option>
+    <option value="Academic Advisor">Academic Advisor</option>
+    <option value="Academic And Behavior Support Staff">Academic And Behavior Support Staff</option>
+    <option value="Academic Tutor"> Academic Tutor</option>
+    <option value="Accessioner">Accessioner</option>
+    <option value="Accident Benefits Representative"> Accident Benefits Representative</option>
+    <option value="Accommodation Service Specialist"> Accommodation Service Specialist</option>
+      <option value="Account Administrator"> Account Administrator</option>
+      <option value="Account Administrator II Fleet"> Account Administrator II Fleet</option>
+      <option value="Account Analyst"> Account Analyst</option>
+      <option value="Account Assistant"> Account Assistant</option>
+      <option value="Account Associate"> Account Associate</option>
+      <option value="Account Based Marketing Manager"> Account Based Marketing Manager</option>
+      <option value="Account Coordinator"> Account Coordinator</option>
+      <option value="Account Development Executive"> Account Development Executive</option>
+      <option value="Account Development Manager"> Account Development Manager</option>
+      <option value="Account Development Representative"> Account Development Representative</option>
+      <option value="Account Director"> Account Director</option>
+      <option value="Account Handler"> Account Handler</option>
+      <option value="Account Manager"> Account Manager</option>
+      <option value="Accounting Administrator"> Accounting Administrator</option>
+      <option value="Accounting Analyst"> Accounting Analyst</option>
+      <option value="Accounting Assistant"> Accounting Assistant</option>
+      <option value="Accounts Administrator"> Accounts Administrator</option>
+      <option value="Accounts Manager"> Accounts Manager</option>
+      <option value="Accounts Payable Administrator"> Accounts Payable Administrator</option>
+      <option value="Accounts Payable Officer"> Accounts Payable Officer</option>
+      <option value="Account Support Specialist"> Account Support Specialist</option>
+      <option value="Accountant"> Accountant</option>
+      <option value="Acoustic Consultant"> Acoustic Consultant</option>
+      <option value="Acquisition Marketing Manager"> Acquisition Marketing Manager</option>
+      <option value="Activities Assistant"> Activities Assistant</option>
+      <option value="Activities Director">Activities Director</option>
+      <option value="Activity Leader"> Activity Leader</option>
+      <option value="Acupuncturist"> Acupuncturist</option>
+      <option value="Ad Operations Coordinator"> Ad Operations Coordinator</option>
+      <option value="Ad Operations Manager">Ad Operations Manager </option>
+      <option value="Ads Manager">Ads Manager</option>
+      <option value="Advanced Analytics"> Advanced Analytics</option>
+      <option value="Advanced Auditor"> Advanced Auditor</option>
+      <option value="Advanced C++ Developer">Advanced C++ Developer </option>
+      <option value="Advanced Install Technician">Advanced Install Technician</option>
+      <option value="Advanced Medical Support Assistant">Advanced Medical Support Assistant </option>
+      <option value="Advanced Manufacturing Engineer">Advanced Manufacturing Engineer </option>
+      <option value="Advanced Nurse Practitioner">Advanced Nurse Practitioner </option>
+      <option value="Advanced Technician"> Advanced Technician</option>
+      <option value="AEM Architect">AEM Architect </option>
+      <option value="AEM Developer"> AEM Developer</option>
+      <option value="AEM Technical Lead"> AEM Technical Lead</option>
+      <option value="Aesthetician"> Aesthetician</option>
+      <option value="After School Educator">After School Educator </option>
+      <option value="Agency Manager"> Agency Manager</option>
+      <option value="Agile Coach">Agile Coach </option>
+      <option value="Agile Delivery Manager"> Agile Delivery Manager</option>
+      <option value="Agile Developer"> Agile Developer</option>
+      <option value="Agile Project Manager">Agile Project Manager </option>
+      <option value="A&H Underwriter">A&H Underwriter </option>
+      <option value="Aiops Solution Architect">Aiops Solution Architect </option>
+      <option value="Air Conditioning Engineer"> Air Conditioning Engineer</option>
+      <option value="AI Researcher">AI Researcher </option>
+      <option value="Airline Sales Manager">Airline Sales Manager </option>
+      <option value="AI Scientist"> AI Scientist</option>
+      <option value="Algorithm Developer">Algorithm Developer </option>
+      <option value="Algorithm Engineer"> Algorithm Engineer</option>
+      <option value="Amazon Account Manager">Amazon Account Manager </option>
+      <option value="Amazon Delivery Driver">Amazon Delivery Driver </option>
+      <option value="Analytical Chemist">Analytical Chemist</option>
+      <option value="Android Developer">Android Developer </option>
+      <option value="Android Software Engineer"> Android Software Engineer</option>
+      <option value="Angular Developer"> Angular Developer</option>
+      <option value="Animator"> Animator</option>
+      <option value="API Architect"> API Architect</option>
+      <option value="API Developer">API Developer </option>
+      <option value="App Developer">App Developer </option>
+      <option value="Application Developer">Application Developer </option>
+      <option value="Applications Analyst"> Applications Analyst</option>
+      <option value="Application Security Developer"> Application Security Developer</option>
+      <option value="Apprentice Electrician"> Apprentice Electrician</option>
+      <option value="AP Specialist"> AP Specialist</option>
+      <option value="Area Director">Area Director </option>
+      <option value="Art Director">Art Director </option>
+      <option value="Assembler Electronics">Assembler Electronics </option>
+      <option value="Asset Artist">Asset Artist </option>
+      <option value="Assistant Cook"> Assistant Cook</option>
+      <option value="Assistant Credit Manager"> Assistant Credit Manager</option>
+      <option value="Assistant Designer">Assistant Designer </option>
+      <option value="Assistant Financial Analyst">Assistant Financial Analyst </option>
+      <option value="Assistant Food And Beverage Manager"> Assistant Food And Beverage Manager</option>
+      <option value="Assistant IT Manager"> Assistant IT Manager</option>
+      <option value="Assistant Kitchen Manager">Assistant Kitchen Manager </option>
+      <option value="Assistant Pharmacy">Assistant Pharmacy </option>
+      <option value="Assistant Placement"> Assistant Placement</option>
+      <option value="Assistant Professor">Assistant Professor </option>
+      <option value="Assistant Sales Manager">Assistant Sales Manager </option>
+      <option value="Assistant Teacher"> Assistant Teacher</option>
+      <option value="Associate Chemist"> Associate Chemist</option>
+      <option value="Associate Devops Engineer">Associate Devops Engineer </option>
+      <option value="Associate Engineer"> Associate Engineer</option>
+      <option value="Associate Manager">Associate Manager </option>
+      <option value="Associate Professor"> Associate Professor</option>
+      <option value="Associate Technician">Associate Technician </option>
+      <option value="Attorney"> Attorney</option>
+      <option value="Audio Designer"> Audio Designer</option>
+      <option value="Audit Assistant">Audit Assistant </option>
+      <option value="Auto Electrician">Auto Electrician </option>
+      <option value="Automation Supervisor">Automation Supervisor </option>
+      <option value="Automotive Body Technician">Automotive Body Technician </option>
+      <option value="Automotive Parts Specialist">Automotive Parts Specialist </option>
+      <option value="Auto Parts Clerk">Auto Parts Clerk </option>
+      <option value="AWS Application Developer">AWS Application Developer </option>
+      <option value="Azure Architect"> Azure Architect</option>
+      <option value="Azure Developer">Azure Developer </option>
+      <option value="B2B Marketing Manager">B2B Marketing Manager </option>
+      <option value="Babysitter">Babysitter </option>
+      <option value="Backend Developer"> Backend Developer</option>
+      <option value="Backend Java Developer"> Backend Java Developer</option>
+      <option value="Backend Software Engineer">Backend Software Engineer </option>
+      <option value="Backend Php Developer">Backend Php Developer </option>
+      <option value="Backend Technical Lead"> Backend Technical Lead</option>
+      <option value="Background Actor">Background Actor </option>
+      <option value="Back Server"> Back Server</option>
+      <option value="Backup Administrator"> Backup Administrator</option>
+      <option value="Bagger"> Bagger</option>
+      <option value="Baker">Baker </option>
+      <option value="Ballet Teacher"> Ballet Teacher</option>
+      <option value="Banker"> Banker</option>
+      <option value="Banking Manager">Banking Manager </option>
+      <option value="Banquet Chef"> Banquet Chef</option>
+      <option value="Barback">Barback </option>
+      <option value="Barista"> Barista</option>
+      <option value="Barista and Cashier">Barista and Cashier </option>
+      <option value="Bar Supervisor">Bar Supervisor </option>
+      <option value="Baseball Coach">Baseball Coach </option>
+      <option value="Basketball Coach">Basketball Coach </option>
+      <option value="Batcher">Batcher</option>
+      <option value="Beauty Advisor">Beauty Advisor</option>
+      <option value="Before School Club Assistant">Before School Club Assistant</option>
+      <option value="Behavioral Therapist">Behavioral Therapist</option>
+      <option value="Bellhop">Bellhop</option>
+      <option value="Bench Jeweler">Bench Jeweler</option>
+      <option value="Benefits Specialist">Benefits Specialist</option>
+      <option value="BI Analyst">BI Analyst</option>
+      <option value="Bid Writer">Bid Writer</option>
+      <option value="Bi Engineer">Bi Engineer</option>
+      <option value="Biller">Biller</option>
+      <option value="Biochemical Engineer">Biochemical Engineer</option>
+      <option value="Biochemist">Biochemist</option>
+      <option value="Biologist">Biologist</option>
+      <option value="Biomedical Engineer">Biomedical Engineer</option>
+      <option value="Blender">Blender</option>
+      <option value="Blogger">Blogger</option>
+      <option value="Blood Drive Technical Assistant">Blood Drive Technical Assistant</option>
+      <option value="Bodyguard">Bodyguard</option>
+      <option value="Body Repair Tech">Body Repair Tech</option>
+      <option value="Booking Agent">Booking Agent</option>
+      <option value="Bookkeeper">Bookkeeper</option>
+      <option value="Botones">Botones</option>
+      <option value="Boxer">Boxer</option>
+      <option value="Branch Administrator">Branch Administrator</option>
+      <option value="Brand Associate">Brand Associate</option>
+      <option value="Brand Designer">Brand Designer</option>
+      <option value="Brand Specialist">Brand Specialist</option>
+      <option value="Broker">Broker</option>
+      <option value="Builder">Builder</option>
+      <option value="Building Engineer">Building Engineer</option>
+      <option value="Bus Driver">Bus Driver</option>
+      <option value="Business Account Manager">Business Account Manager</option>
+      <option value="Business Banker">Business Banker</option>
+      <option value="Business Developer">Business Developer</option>
+      <option value="Business Manager">Business Manager</option>
+      <option value="Business Professional">Business Professional</option>
+      <option value="Business Strategist">Business Strategist</option>
+      <option value="Business Support">Business Support</option>
+      <option value="Cabinet Maker">Cabinet Maker</option>
+      <option value="Cable Assembler">Cable Assembler</option>
+      <option value="CAD Designer">CAD Designer</option>
+      <option value="Call Center Agent">Call Center Agent</option>
+      <option value="Call Center Supervisor">Call Center Supervisor</option>
+      <option value="Caller">Caller</option>
+      <option value="Camera Operator">Camera Operator</option>
+      <option value="Camp Director">Camp Director</option>
+      <option value="Captain">Captain</option>
+      <option value="Car Dealer">Car Dealer</option>
+      <option value="Care Aide">Care Aide</option>
+      <option value="Career Coach">Career Coach</option>
+      <option value="Care Manager">Care Manager</option>
+      <option value="Car Mechanic">Car Mechanic</option>
+      <option value="Car Salesman">Car Salesman</option>
+      <option value="Case Aide">Case Aide</option>
+      <option value="Cashier">Cashier</option>
+      <option value="Casting Assistant">Casting Assistant</option>
+      <option value="Casual Security Guard">Casual Security Guard</option>
+      <option value="Category Manager">Category Manager</option>
+      <option value="Catering Chef">Catering Chef</option>
+      <option value="C++ Cross Platform Application Developer">C++ Cross Platform Application Developer</option>
+      <option value="C++ Developer">C++ Developer</option>
+      <option value="Centre Manager">Centre Manager</option>
+      <option value="CEO">CEO</option>
+      <option value="Certified Athletic Trainer">Certified Athletic Trainer</option>
+      <option value="CFO">CFO</option>
+      <option value="Chairman">Chairman</option>
+      <option value="Channel Manager">Channel Manager</option>
+      <option value="Chaplain">Chaplain</option>
+      <option value="Chef">Chef</option>
+      <option value="Chef Assistant">Chef Assistant</option>
+      <option value="Chemical Analyst">Chemical Analyst</option>
+      <option value="Chemical Technician">Chemical Technician</option>
+      <option value="Chemist">Chemist</option>
+      <option value="Chemistry Professor">Chemistry Professor</option>
+      <option value="Chemistry Teacher">Chemistry Teacher</option>
+      <option value="Chief Accountant">Chief Accountant</option>
+      <option value="Child Care Assistant">Child Care Assistant</option>
+      <option value="Choreographer">Choreographer</option>
+      <option value="Citrix Engineer">Citrix Engineer</option>
+      <option value="Claim Adjuster">Claim Adjuster</option>
+      <option value="Claims Handler">Claims Handler</option>
+      <option value="Clamp Operator">Clamp Operator</option>
+      <option value="Clerk">Clerk</option>
+      <option value="Client Accountant">Client Accountant</option>
+      <option value="Client Concierge">Client Concierge</option>
+      <option value="Client Manager">Client Manager</option>
+      <option value="Client Services Agent">Client Services Agent</option>
+      <option value="Clinical Analyst">Clinical Analyst</option>
+      <option value="Clinical Director">Clinical Director</option>
+      <option value="Clinical Manager">Clinical Manager</option>
+      <option value="Clinical Medical Assistant">Clinical Medical Assistant</option>
+      <option value="Clinical Nurse">Clinical Nurse</option>
+      <option value="Clinical Scientist">Clinical Scientist</option>
+      <option value="Clothing Sales Associate">Clothing Sales Associate</option>
+      <option value="Cloud Application Architect">Cloud Application Architect</option>
+      <option value="Cloud Developer">Cloud Developer</option>
+      <option value="Cloud Specialist">Cloud Specialist</option>
+      <option value="Clown">Clown</option>
+      <option value="CNA">CNA</option>
+      <option value="Coach">Coach</option>
+      <option value="Coach Agile">Coach Agile</option>
+      <option value="Collaboration Engineer">Collaboration Engineer</option>
+      <option value="Collections Manager">Collections Manager</option>
+      <option value="Colorist">Colorist</option>
+      <option value="Commercial Banker">Commercial Banker</option>
+      <option value="Commercial Director">Commercial Director</option>
+      <option value="Commission Analyst">Commission Analyst</option>
+      <option value="Communications Manager">Communications Manager</option>
+      <option value="Community Lead">Community Lead</option>
+      <option value="Companion">Companion</option>
+      <option value="Compositor">Compositor</option>
+      <option value="Computer Analyst">Computer Analyst</option>
+      <option value="Computer Assembler">Computer Assembler</option>
+      <option value="Computer Builds Technician">Computer Builds Technician</option>
+      <option value="Computer Hardware Engineer">Computer Hardware Engineer</option>
+      <option value="Computer Maintenance Technician">Computer Maintenance Technician</option>
+      <option value="Computer Network Technician">Computer Network Technician</option>
+      <option value="Computer Programmer">Computer Programmer</option>
+      <option value="Computer Science Teacher">Computer Science Teacher</option>
+      <option value="Computer Scientist">Computer Scientist</option>
+      <option value="Computer Scientist C++">Computer Scientist C++</option>
+      <option value="Computer Support Specialist">Computer Support Specialist</option>
+      <option value="Computer Systems Analyst">Computer Systems Analyst</option>
+      <option value="Computer Teacher">Computer Teacher</option>
+      <option value="Computer Technician">Computer Technician</option>
+      <option value="Computer Vision Engineer">Computer Vision Engineer</option>
+      <option value="Computing Solutions Advisor">Computing Solutions Advisor</option>
+      <option value="Concierge">Concierge</option>
+      <option value="Conference Coordinator">Conference Coordinator</option>
+      <option value="Construction Laborer">Construction Laborer</option>
+      <option value="Consulting Manager">Consulting Manager</option>
+      <option value="Content Developer">Content Developer</option>
+      <option value="Continuing Care Assistant">Continuing Care Assistant</option>
+      <option value="Contracts Analyst">Contracts Analyst</option>
+      <option value="Corporate Secretary">Corporate Secretary</option>
+      <option value="Cosmetician">Cosmetician</option>
+      <option value="Cosmetologist">Cosmetologist</option>
+      <option value="Cost Accountant">Cost Accountant</option>
+      <option value="Counter Salesperson">Counter Salesperson</option>
+      <option value="Creative Designer">Creative Designer</option>
+      <option value="Creature TD">Creature TD</option>
+      <option value="Credit Analyst">Credit Analyst</option>
+      <option value="Credit Manager">Credit Manager</option>
+      <option value="Crime Analyst">Crime Analyst</option>
+      <option value="Crime Scene Investigator">Crime Scene Investigator</option>
+      <option value="Criminal Investigator">Criminal Investigator</option>
+      <option value="Criminalist">Criminalist</option>
+      <option value="Crossing Guard">Crossing Guard</option>
+      <option value="C# Software Developer">C# Software Developer</option>
+      <option value="C++ Software Developer">C++ Software Developer</option>
+      <option value="C# Software Engineer">C# Software Engineer</option>
+      <option value="C++ Software Engineer">C++ Software Engineer</option>
+      <option value="Customer Account Specialist">Customer Account Specialist</option>
+      <option value="Customer Analyst">Customer Analyst</option>
+      <option value="Customer Care Agent">Customer Care Agent</option>
+      <option value="Customer Champion">Customer Champion</option>
+      <option value="Customer Experience Coor">Customer Experience Coor</option>
+      <option value="Customer Project Manager">Customer Project Manager</option>
+      <option value="Customer Service">Customer Service</option>
+      <option value="Customer Service Coordinator">Customer Service Coordinator</option>
+      <option value="Customer Service Expert">Customer Service Expert</option>
+      <option value="Customer Success Lead">Customer Success Lead</option>
+      <option value="Cutter Meat">Cutter Meat</option>
+      <option value="Cyber Security Analyst">Cyber Security Analyst</option>
+      <option value="Cyber Security Architect">Cyber Security Architect</option>
+      <option value="Cybersecurity Architect">Cybersecurity Architect</option>
+      <option value="Cyber Security Defense Analyst">Cyber Security Defense Analyst</option>
+      <option value="Cybersecurity Engineer">Cybersecurity Engineer</option>
+      <option value="Cytotechnologist">Cytotechnologist</option>
+      <option value="Dance Teacher">Dance Teacher</option>
+      <option value="Data Administrator">Data Administrator</option>
+      <option value="Data Analyst">Data Analyst</option>
+      <option value="Data Analytics Engineer">Data Analytics Engineer</option>
+      <option value="Database Administrator">Database Administrator</option>
+      <option value="Database Analyst">Database Analyst</option>
+      <option value="Database Architect">Database Architect</option>
+      <option value="Database Coordinator">Database Coordinator</option>
+      <option value="Database Developer">Database Developer</option>
+      <option value="Database Engineer">Database Engineer</option>
+      <option value="Database Manager">Database Manager</option>
+      <option value="Data Internship">Data Internship</option>
+      <option value="Data Science Analyst">Data Science Analyst</option>
+      <option value="Data Scientist">Data Scientist</option>
+      <option value="Data Specialist">Data Specialist</option>
+      <option value="Deal Specialist">Deal Specialist</option>
+      <option value="Dean">Dean</option>
+      <option value="Debt Specialist">Debt Specialist</option>
+      <option value="Deckhand">Deckhand</option>
+      <option value="Deli Manager">Deli Manager</option>
+      <option value="Demand Analyst">Demand Analyst</option>
+      <option value="Dental Aide">Dental Aide</option>
+      <option value="Dentist">Dentist</option>
+      <option value="Department Manager">Department Manager</option>
+      <option value="Department Specialist">Department Specialist</option>
+      <option value="Deployment Engineer">Deployment Engineer</option>
+      <option value="Deployment Manager">Deployment Manager</option>
+      <option value="Deployment Specialist">Deployment Specialist</option>
+      <option value="Deployment Technician">Deployment Technician</option>
+      <option value="Design Architect">Design Architect</option>
+      <option value="Designer">Designer</option>
+      <option value="Designer Web">Designer Web</option>
+      <option value="Design Supervisor">Design Supervisor</option>
+      <option value="Desktop Administrator">Desktop Administrator</option>
+      <option value="Desktop Engineer">Desktop Engineer</option>
+      <option value="Desktop Support">Desktop Support</option>
+      <option value="Desktop Systems Specialist">Desktop Systems Specialist</option>
+      <option value="Desktop Technician">Desktop Technician</option>
+      <option value="Development Director">Development Director</option>
+      <option value="Devops Lead">Devops Lead</option>
+      <option value="Die Maker">Die Maker</option>
+      <option value="Digital Artist">Digital Artist</option>
+      <option value="Digital Content Writer">Digital Content Writer</option>
+      <option value="Digital Manager">Digital Manager</option>
+      <option value="Digital Marketer">Digital Marketer</option>
+      <option value="Digital Media Intern">Digital Media Intern</option>
+      <option value="Digital Product Manager">Digital Product Manager</option>
+      <option value="Director of Accounting">Director of Accounting</option>
+      <option value="Director of Data">Director of Data</option>
+      <option value="Director of IT">Director of IT</option>
+      <option value="Director of Photography">Director of Photography</option>
+      <option value="Director of Research">Director of Research</option>
+      <option value="Director of Technology">Director of Technology</option>
+      <option value="Director of Training">Director of Training</option>
+      <option value="Discharge Planner">Discharge Planner</option>
+      <option value="Dish Machine Operator">Dish Machine Operator</option>
+      <option value="Dishwasher">Dishwasher</option>
+      <option value="Distillation Operator">Distillation Operator</option>
+      <option value="Divemaster">Divemaster</option>
+      <option value="Diver">Diver</option>
+      <option value="Doctor">Doctor</option>
+      <option value="Doctor Assistant">Doctor Assistant</option>
+      <option value="Document Agent">Document Agent</option>
+      <option value="Driller">Driller</option>
+      <option value="Drywall Taper">Drywall Taper</option>
+      <option value="Ecologist">Ecologist</option>
+      <option value="Econometrician">Econometrician</option>
+      <option value="Economist">Economist</option>
+      <option value="Editor">Editor</option>
+      <option value="Education Administrator">Education Administrator</option>
+      <option value="Educational Assistant">Educational Assistant</option>
+      <option value="Educational Specialist">Educational Specialist</option>
+      <option value="Education Teacher">Education Teacher</option>
+      <option value="Educator">Educator</option>
+      <option value="Electrical Apprentice">Electrical Apprentice</option>
+      <option value="Electrical Engineer">Electrical Engineer</option>
+      <option value="Electrician Helper">Electrician Helper</option>
+      <option value="Electronicien">Electronicien</option>
+      <option value="Electro Technician">Electro Technician</option>
+      <option value="Embedded Engineer">Embedded Engineer</option>
+      <option value="Embedded Firmware Engineer">Embedded Firmware Engineer</option>
+      <option value="Embedded Software Developer">Embedded Software Developer</option>
+      <option value="Embedded Systems Engineer">Embedded Systems Engineer</option>
+      <option value="Embroidery Machine Operator">Embroidery Machine Operator</option>
+      <option value="Emerging Leader">Emerging Leader</option>
+      <option value="Employee Benefits Account Manager">Employee Benefits Account Manager</option>
+      <option value="Employee Relations Consultant">Employee Relations Consultant</option>
+      <option value="Employment Specialist">Employment Specialist</option>
+      <option value="Endocrinologist">Endocrinologist</option>
+      <option value="Endpoint Security Engineer">Endpoint Security Engineer</option>
+      <option value="End User Computer Analyst">End User Computer Analyst</option>
+      <option value="End User Technician">End User Technician</option>
+      <option value="Energy Analyst">Energy Analyst</option>
+      <option value="Engagement Specialist">Engagement Specialist</option>
+      <option value="Engineering Designer">Engineering Designer</option>
+      <option value="Engineering Teacher">Engineering Teacher</option>
+      <option value="Engine Programmer">Engine Programmer</option>
+      <option value="English Editor">English Editor</option>
+      <option value="English Instructor">English Instructor</option>
+      <option value="English Professor">English Professor</option>
+      <option value="English Teacher">English Teacher</option>
+      <option value="Enologist">Enologist</option>
+      <option value="Enrollment Specialist">Enrollment Specialist</option>
+      <option value="Enterprise Analyst">Enterprise Analyst</option>
+      <option value="Enterprise Associate">Enterprise Associate</option>
+      <option value="Enterprise Sales Engineer">Enterprise Sales Engineer</option>
+      <option value="Enterprise Sales Engineer">Enterprise Sales Engineer</option>
+      <option value="Environmental Chemist">Environmental Chemist</option>
+      <option value="Environmental Educator">Environmental Educator</option>
+      <option value="Environmental Graphic Designer">Environmental Graphic Designer</option>
+      <option value="Environmentalist">Environmentalist</option>
+      <option value="Environmental Scientist">Environmental Scientist</option>
+      <option value="Equestrian">Equestrian</option>
+      <option value="ER Nurse">ER Nurse</option>
+      <option value="Ergonomist">Ergonomist</option>
+      <option value="Ethical Hacker">Ethical Hacker</option>
+      <option value="Event Staff">Event Staff</option>
+      <option value="Executive">Executive</option>
+      <option value="Executive Recruiter">Executive Recruiter</option>
+      <option value="Expert Cybersecurite">Expert Cybersecurite</option>
+      <option value="Exploitant Transport">Exploitant Transport</option>
+      <option value="Fabrication Machine Operator">Fabrication Machine Operator</option>
+      <option value="Fabricator">Fabricator</option>
+      <option value="Fabric Cutter">Fabric Cutter</option>
+      <option value="Facilities Engineer">Facilities Engineer</option>
+      <option value="Facilities Officer">Facilities Officer</option>
+      <option value="Facilities Technician">Facilities Technician</option>
+      <option value="Family Child Care Provider">Family Child Care Provider</option>
+      <option value="Farmer">Farmer</option>
+      <option value="Fashion Assistant">Fashion Assistant</option>
+      <option value="Fashion Designer">Fashion Designer</option>
+      <option value="Fiber Engineer">Fiber Engineer</option>
+      <option value="Fiber Network Planner">Fiber Network Planner</option>
+      <option value="Finance Administrator">Finance Administrator</option>
+      <option value="Financial Planner">Financial Planner</option>
+      <option value="Financial Reporting Analyst">Financial Reporting Analyst</option>
+      <option value="Fingerprint Technician">Fingerprint Technician</option>
+      <option value="Fire Chief">Fire Chief</option>
+      <option value="Firewall Engineer">Firewall Engineer</option>
+      <option value="Firmware Developer">Firmware Developer</option>
+      <option value="Fisheries Biologist">Fisheries Biologist</option>
+      <option value="Fitter">Fitter</option>
+      <option value="Flagger">Flagger</option>
+      <option value="Fleet Technician">Fleet Technician</option>
+      <option value="Flight Attendant">Flight Attendant</option>
+      <option value="Flight Dispatcher">Flight Dispatcher</option>
+      <option value="Flight Test Engineer">Flight Test Engineer</option>
+      <option value="Floral Clerk">Floral Clerk</option>
+      <option value="Food and Beverage Assistant">Food and Beverage Assistant</option>
+      <option value="Food Manager">Food Manager</option>
+      <option value="Forensic Scientist">Forensic Scientist</option>
+      <option value="Formulator">Formulator</option>
+      <option value="Framer">Framer</option>
+      <option value="Fraud Agent">Fraud Agent</option>
+      <option value="Fraud Analyst">Fraud Analyst</option>
+      <option value="Fraud Investigator">Fraud Investigator</option>
+      <option value="Freight Agent">Freight Agent</option>
+      <option value="French Teacher">French Teacher</option>
+      <option value="Front Desk Administrator">Front Desk Administrator</option>
+      <option value="Front End and Mobile Developer">Front End and Mobile Developer</option>
+      <option value="Front End Developer">Front End Developer</option>
+      <option value="Front End Engineer">Front End Engineer</option>
+      <option value="Front End Manager">Front End Manager</option>
+      <option value="Front End React Developer">Front End React Developer</option>
+      <option value="Front End Software Engineer">Front End Software Engineer</option>
+      <option value="Front Store Supervisor">Front Store Supervisor</option>
+      <option value="Fulfillment Operator">Fulfillment Operator</option>
+      <option value="Functional Analyst">Functional Analyst</option>
+      <option value="Fund Analyst">Fund Analyst</option>
+      <option value="Fundraiser">Fundraiser</option>
+      <option value="Furniture Assembler">Furniture Assembler</option>
+      <option value="Gallery Assistant">Gallery Assistant</option>
+      <option value="Gallery Host">Gallery Host</option>
+      <option value="Game Designer">Game Designer</option>
+      <option value="Game Developer">Game Developer</option>
+      <option value="Gameplay Animator">Gameplay Animator</option>
+      <option value="Game Programmer">Game Programmer</option>
+      <option value="Game QA Tester">Game QA Tester</option>
+    <option value="Games Producer">Games Producer</option>
+    <option value="Gas Technician">Gas Technician</option>
+    <option value="Gate Agent">Gate Agent</option>
+    <option value="GCP Security Engineer">GCP Security Engineer</option>
+    <option value="Gemologist">Gemologist</option>
+    <option value="General Assembler">General Assembler</option>
+    <option value="General Dentist">General Dentist</option>
+    <option value="General Engineer">General Engineer</option>
+    <option value="General Labour">General Labour</option>
+    <option value="General Office Associate">General Office Associate</option>
+    <option value="General Worker">General Worker</option>
+    <option value="Geographer">Geographer</option>
+    <option value="Geophysicist">Geophysicist</option>
+    <option value="Geospatial Analyst">Geospatial Analyst</option>
+    <option value="Geospatial Data Analyst">Geospatial Data Analyst</option>
+    <option value="GIS Developer">GIS Developer</option>
+    <option value="Gis Specialist">Gis Specialist</option>
+    <option value="Gluer">Gluer</option>
+    <option value="Golf Coach">Golf Coach</option>
+    <option value="Golf Professional">Golf Professional</option>
+    <option value="Gouvernant">Gouvernant</option>
+    <option value="Grader">Grader</option>
+    <option value="Graduate Account Development Executive">Graduate Account Development Executive</option>
+    <option value="Graduate Account Manager">Graduate Account Manager</option>
+    <option value="Graduate Analyst">Graduate Analyst</option>
+    <option value="Graduate Assistant">Graduate Assistant</option>
+    <option value="Graduate Associate">Graduate Associate</option>
+    <option value="Graduate Business Development Executive">Graduate Business Development Executive</option>
+    <option value="Graduate Commercial Surveyor">Graduate Commercial Surveyor</option>
+    <option value="Graduate Consultant">Graduate Consultant</option>
+    <option value="Graduate Customer Representative">Graduate Customer Representative</option>
+    <option value="Graduate Developer">Graduate Developer</option>
+    <option value="Graduate Engineer">Graduate Engineer</option>
+    <option value="Graduate Mentorship Program">Graduate Mentorship Program</option>
+    <option value="Graduate Nurse">Graduate Nurse</option>
+    <option value="Graduate Programmer">Graduate Programmer</option>
+    <option value="Graduate Software Engineer">Graduate Software Engineer</option>
+    <option value="Graduate Software Tester">Graduate Software Tester</option>
+    <option value="Grant Accountant">Grant Accountant</option>
+    <option value="Grant Writer">Grant Writer</option>
+    <option value="Graphic and Web Designer">Graphic and Web Designer</option>
+    <option value="Graphic Designer">Graphic Designer</option>
+    <option value="Graphic Web Designer">Graphic Web Designer</option>
+    <option value="Grocer">Grocer</option>
+    <option value="Grocery Manager">Grocery Manager</option>
+    <option value="Groundskeeper">Groundskeeper</option>
+    <option value="Growth Account Executive">Growth Account Executive</option>
+    <option value="Growth Manager">Growth Manager</option>
+    <option value="Guard">Guard</option>
+    <option value="Guest Service">Guest Service</option>
+    <option value="Guide">Guide</option>
+    <option value="Gutter">Gutter</option>
+    <option value="Hair Assistant">Hair Assistant</option>
+    <option value="Hair Stylist">Hair Stylist</option>
+    <option value="Hardware Applications Engineer">Hardware Applications Engineer</option>
+    <option value="Hardware Design Engineer">Hardware Design Engineer</option>
+    <option value="Hardware Product Manager">Hardware Product Manager</option>
+    <option value="Hardware Technician">Hardware Technician</option>
+    <option value="Head Bartender">Head Bartender</option>
+    <option value="Head of Analytics">Head of Analytics</option>
+    <option value="Head of Data">Head of Data</option>
+    <option value="Head of Growth">Head of Growth</option>
+    <option value="Head of HR">Head of HR</option>
+    <option value="Head of IT">Head of IT</option>
+    <option value="Head of Marketing">Head of Marketing</option>
+    <option value="Head of PR">Head of PR</option>
+    <option value="Head of Security">Head of Security</option>
+    <option value="Head Teller">Head Teller</option>
+    <option value="Health Assistant">Health Assistant</option>
+    <option value="Healthcare Analyst">Healthcare Analyst</option>
+    <option value="Healthcare Data Analyst">Healthcare Data Analyst</option>
+    <option value="Healthcare Manager">Healthcare Manager</option>
+    <option value="Health Coach">Health Coach</option>
+    <option value="Health Insurance Agent">Health Insurance Agent</option>
+    <option value="Health Safety Environment">Health Safety Environment</option>
+    <option value="Health Specialist">Health Specialist</option>
+    <option value="Health Teacher">Health Teacher</option>
+    <option value="Health Technician">Health Technician</option>
+    <option value="Heavy Construction">Heavy Construction</option>
+    <option value="Heavy Equipment Operator">Heavy Equipment Operator</option>
+    <option value="Help Desk Administrator">Help Desk Administrator</option>
+    <option value="Help Desk Agent">Help Desk Agent</option>
+    <option value="Help Desk Coordinator">Help Desk Coordinator</option>
+    <option value="Helper">Helper</option>
+    <option value="High School Biology Teacher">High School Biology Teacher</option>
+    <option value="High School Counselor">High School Counselor</option>
+    <option value="High School English Teacher">High School English Teacher</option>
+    <option value="High School History Teacher">High School History Teacher</option>
+    <option value="High School Math Teacher">High School Math Teacher</option>
+    <option value="High School Science Teacher">High School Science Teacher</option>
+    <option value="Highway Design Engineer">Highway Design Engineer</option>
+    <option value="Histologist">Histologist</option>
+    <option value="History Teacher">History Teacher</option>
+    <option value="Hitch Installer">Hitch Installer</option>
+    <option value="Home Carer">Home Carer</option>
+    <option value="Home Health Care">Home Health Care</option>
+    <option value="Home Health RN">Home Health RN</option>
+    <option value="Home School Teacher">Home School Teacher</option>
+    <option value="Horticulturist">Horticulturist</option>
+    <option value="Hospital Concierge">Hospital Concierge</option>
+    <option value="Hospital Director">Hospital Director</option>
+    <option value="Hospital Medical Assistant">Hospital Medical Assistant</option>
+    <option value="Hospital Pharmacist">Hospital Pharmacist</option>
+    <option value="Hotel Assistant Manager">Hotel Assistant Manager</option>
+    <option value="Hotel Front Desk">Hotel Front Desk</option>
+    <option value="Hotel Manager">Hotel Manager</option>
+    <option value="Hotel Sales Manager">Hotel Sales Manager</option>
+    <option value="Housekeeping Aide">Housekeeping Aide</option>
+    <option value="HR Administrative Assistant">HR Administrative Assistant</option>
+    <option value="HR Administrator">HR Administrator</option>
+    <option value="HR Advisor">HR Advisor</option>
+    <option value="HR Analyst">HR Analyst</option>
+    <option value="HR and Recruitment Manager">HR and Recruitment Manager</option>
+    <option value="HR Business Analyst">HR Business Analyst</option>
+    <option value="HR Coordinator">HR Coordinator</option>
+    <option value="HR Data Analyst">HR Data Analyst</option>
+    <option value="HR Manager">HR Manager</option>
+    <option value="HR Recruiter">HR Recruiter</option>
+    <option value="HTML Developer">HTML Developer</option>
+    <option value="HTML Email Developer">HTML Email Developer</option>
+    <option value="Hub Driver">Hub Driver</option>
+    <option value="Human Capital Manager">Human Capital Manager</option>
+    <option value="Human Resources Clerk">Human Resources Clerk</option>
+    <option value="Human Resources Officer">Human Resources Officer</option>
+    <option value="Hunting Team Leader">Hunting Team Leader</option>
+    <option value="HVAC Application Manager">HVAC Application Manager</option>
+    <option value="HVAC Counter Sales">HVAC Counter Sales</option>
+    <option value="Hybrid Cloud Infrastructure Architect">Hybrid Cloud Infrastructure Architect</option>
+    <option value="Hygienist">Hygienist</option>
+    <option value="IAM Engineer">IAM Engineer</option>
+    <option value="IBM Partner Sales">IBM Partner Sales</option>
+    <option value="ICT Teacher">ICT Teacher</option>
+    <option value="IDE Vacataire">IDE Vacataire</option>
+    <option value="Illustrator">Illustrator</option>
+    <option value="Imagery Analyst">Imagery Analyst</option>
+    <option value="Immigration Assistant">Immigration Assistant</option>
+    <option value="Immigration Lawyer">Immigration Lawyer</option>
+    <option value="Immunologist">Immunologist</option>
+    <option value="Implementation Specialist">Implementation Specialist</option>
+    <option value="Inbound Call Center">Inbound Call Center</option>
+    <option value="Inbound Receiving">Inbound Receiving</option>
+    <option value="Income Auditor">Income Auditor</option>
+    <option value="Industrial Designer">Industrial Designer</option>
+    <option value="Industrial Engineer">Industrial Engineer</option>
+    <option value="Industrial Technician">Industrial Technician</option>
+    <option value="Informatics Nurse">Informatics Nurse</option>
+    <option value="Information Developer">Information Developer</option>
+    <option value="Information Security">Information Security</option>
+    <option value="Information Systems Engineer">Information Systems Engineer</option>
+    <option value="Information Technology">Information Technology</option>
+    <option value="Information Technology Specialist">Information Technology Specialist</option>
+    <option value="Info Security Analyst">Info Security Analyst</option>
+    <option value="Infrastructure Developer">Infrastructure Developer</option>
+    <option value="Infusion Nurse">Infusion Nurse</option>
+    <option value="Injection Certified Pharmacist">Injection Certified Pharmacist</option>
+    <option value="Innovation Manager">Innovation Manager</option>
+    <option value="Insert Operator">Insert Operator</option>
+    <option value="Inside Sales Agent">Inside Sales Agent</option>
+    <option value="Inspector">Inspector</option>
+    <option value="Installation Coordinator">Installation Coordinator</option>
+    <option value="Installation Specialist">Installation Specialist</option>
+    <option value="Installer">Installer</option>
+    <option value="Install Technician">Install Technician</option>
+    <option value="Instructor Therapist">Instructor Therapist</option>
+    <option value="Instrumentation Technician">Instrumentation Technician</option>
+    <option value="Instrumentation Technician">Instrumentation Technician</option>
+    <option value="Insurance Processor">Insurance Processor</option>
+    <option value="Intake Counselor">Intake Counselor</option>
+    <option value="Integration Consultant">Integration Consultant</option>
+    <option value="Interaction Designer">Interaction Designer</option>
+    <option value="Interior Sales Consultant">Interior Sales Consultant</option>
+    <option value="Internal Auditor">Internal Auditor</option>
+    <option value="Internal Recruitment Manager">Internal Recruitment Manager</option>
+    <option value="Internal Sales Consultant">Internal Sales Consultant</option>
+    <option value="International Site Manager">International Site Manager</option>
+    <option value="Inventory Associate">Inventory Associate</option>
+    <option value="Inventory Control Manager">Inventory Control Manager</option>
+    <option value="Investigator">Investigator</option>
+    <option value="Investment Banker">Investment Banker</option>
+    <option value="Investment Performance Analysis">Investment Performance Analysis</option>
+    <option value="Investor">Investor</option>
+    <option value="IOS Application Developer">IOS Application Developer</option>
+    <option value="IOS Engineer">IOS Engineer</option>
+    <option value="IOS Mobile Application Developer">IOS Mobile Application Developer</option>
+    <option value="IOS Software Engineer">IOS Software Engineer</option>
+    <option value="IOT Software Architect">IOT Software Architect</option>
+    <option value="IOT Solutions Specialist">IOT Solutions Specialist</option>
+    <option value="IP Verification Engineer">IP Verification Engineer</option>
+    <option value="IT Administrator">IT Administrator</option>
+    <option value="IT Analyst">IT Analyst</option>
+    <option value="IT Application Analyst">IT Application Analyst</option>
+    <option value="IT Apps Programmer">IT Apps Programmer</option>
+    <option value="IT Architect">IT Architect</option>
+    <option value="IT Build Analyst">IT Build Analyst</option>
+    <option value="IT Desktop Support">IT Desktop Support</option>
+    <option value="IT Engineer">IT Engineer</option>
+    <option value="IT Help Desk Analyst">IT Help Desk Analyst</option>
+    <option value="IT Infrastructure Specialist">IT Infrastructure Specialist</option>
+    <option value="IT Internal Auditor">IT Internal Auditor</option>
+    <option value="IT Network Specialist">IT Network Specialist</option>
+    <option value="IT Project Manager">IT Project Manager</option>
+    <option value="IT Security Engineer">IT Security Engineer</option>
+    <option value="IT Sourcer">IT Sourcer</option>
+    <option value="IT Support Technician">IT Support Technician</option>
+    <option value="IT Systems Administrator">IT Systems Administrator</option>
+    <option value="IT Trainer">IT Trainer</option>
+    <option value="Jailer">Jailer</option>
+    <option value="Janitorial Manager">Janitorial Manager</option>
+    <option value="Janitorial Staff">Janitorial Staff</option>
+    <option value="Java API Developer">Java API Developer</option>
+    <option value="Java Application Engineer">Java Application Engineer</option>
+    <option value="Java Backend Developer">Java Backend Developer</option>
+    <option value="Java Developer">Java Developer</option>
+    <option value="Java Programmer">Java Programmer</option>
+    <option value="Java Software Developer">Java Software Developer</option>
+    <option value="Jeweler">Jeweler</option>
+    <option value="Job Coach">Job Coach</option>
+    <option value="Joiner">Joiner</option>
+    <option value="Journalist">Journalist</option>
+    <option value="Journeyman Electrician">Journeyman Electrician</option>
+    <option value="Journeyman Mechanic">Journeyman Mechanic</option>
+    <option value="Judge">Judge</option>
+    <option value="Jury Consultant">Jury Consultant</option>
+    <option value="Kennel Assistant">Kennel Assistant</option>
+    <option value="Kennel Associate">Kennel Associate</option>
+    <option value="Kennel Attendant">Kennel Attendant</option>
+    <option value="Kennel Technician">Kennel Technician</option>
+    <option value="Key Account Area Clinical Specialist">Key Account Area Clinical Specialist</option>
+    <option value="Key Account Lead">Key Account Lead</option>
+    <option value="Key Technician">Key Technician</option>
+    <option value="Kinesiologist">Kinesiologist</option>
+    <option value="Kitchen Cook">Kitchen Cook</option>
+    <option value="Kitchen Coordinator">Kitchen Coordinator</option>
+    <option value="Kitchen Designer">Kitchen Designer</option>
+    <option value="Kitchen Staff">Kitchen Staff</option>
+    <option value="Kitchen Supervisor">Kitchen Supervisor</option>
+    <option value="Kitter">Kitter</option>
+    <option value="Knowledge Management Specialist">Knowledge Management Specialist</option>
+    <option value="Knowledge Manager">Knowledge Manager</option>
+    <option value="KS1 Teacher">KS1 Teacher</option>
+    <option value="KS2 Teacher">KS2 Teacher</option>
+    <option value="KYC Analyst">KYC Analyst</option>
+    <option value="Lab Aide">Lab Aide</option>
+    <option value="Lab Assistant">Lab Assistant</option>
+    <option value="Labeler">Labeler</option>
+    <option value="Lab Manager">Lab Manager</option>
+    <option value="Laboratory Analyst">Laboratory Analyst</option>
+    <option value="Laboratory Assistant">Laboratory Assistant</option>
+    <option value="Laboratory Manager">Laboratory Manager</option>
+    <option value="Laboratory Patient Technician">Laboratory Patient Technician</option>
+    <option value="Laboratory Scientist">Laboratory Scientist</option>
+    <option value="Labour Relations Officer">Labour Relations Officer</option>
+    <option value="Lab Technician">Lab Technician</option>
+    <option value="Laminator">Laminator</option>
+    <option value="Land Analyst">Land Analyst</option>
+    <option value="Landscape Architect">Landscape Architect</option>
+    <option value="Landscape Designer">Landscape Designer</option>
+    <option value="Landscaper">Landscaper</option>
+    <option value="Laundry Aide">Laundry Aide</option>
+    <option value="Law Clerk">Law Clerk</option>
+    <option value="Lawyer">Lawyer</option>
+    <option value="Lead Analyst">Lead Analyst</option>
+    <option value="Lead Baker">Lead Baker</option>
+    <option value="Lead Building Engineer">Lead Building Engineer</option>
+    <option value="Lead Carpenter">Lead Carpenter</option>
+    <option value="Lead Copywriter">Lead Copywriter</option>
+    <option value="Lead Data Analyst">Lead Data Analyst</option>
+    <option value="Lead Designer">Lead Designer</option>
+    <option value="Lead Developer">Lead Developer</option>
+    <option value="Lead Engineer">Lead Engineer</option>
+    <option value="Lead Firmware Engineer">Lead Firmware Engineer</option>
+    <option value="Lead Front End Developer">Lead Front End Developer</option>
+    <option value="Lead Game Designer">Lead Game Designer</option>
+    <option value="Lead Installer">Lead Installer</option>
+    <option value="Lead IOS Developer">Lead IOS Developer</option>
+    <option value="Lead Java Developer">Lead Java Developer</option>
+    <option value="Lead Maintenance">Lead Maintenance</option>
+    <option value="Lead Mobile Engineer">Lead Mobile Engineer</option>
+    <option value="Lead Painter">Lead Painter</option>
+    <option value="Lead QA">Lead QA</option>
+    <option value="Lead Scientist">Lead Scientist</option>
+    <option value="Lead Software Developer">Lead Software Developer</option>
+    <option value="Lead Solution Architect">Lead Solution Architect</option>
+    <option value="Lead Technician">Lead Technician</option>
+    <option value="Lean Engineer">Lean Engineer</option>
+    <option value="Learning and Development">Learning and Development</option>
+    <option value="Learning Coordinator">Learning Coordinator</option>
+    <option value="Learning Designer">Learning Designer</option>
+    <option value="Learning Specialist">Learning Specialist</option>
+    <option value="Lecturer">Lecturer</option>
+    <option value="Legal Advisor">Legal Advisor</option>
+    <option value="Legal Clerk">Legal Clerk</option>
+    <option value="Legal Manager">Legal Manager</option>
+    <option value="Liability Examiner">Liability Examiner</option>
+    <option value="Licensed Insolvency Trustees">Licensed Insolvency Trustees</option>
+    <option value="Licensed Mechanic">Licensed Mechanic</option>
+    <option value="Licensed Sales Agent">Licensed Sales Agent</option>
+    <option value="Licensed Therapist">Licensed Therapist</option>
+    <option value="Licensing Processor">Licensing Processor</option>
+    <option value="Licensing Specialist">Licensing Specialist</option>
+    <option value="Lifeguard">Lifeguard</option>
+    <option value="Lifestyle Manager">Lifestyle Manager</option>
+    <option value="Light Assembly">Light Assembly</option>
+    <option value="Lighting Artist">Lighting Artist</option>
+    <option value="Line Runner">Line Runner</option>
+    <option value="Liquor Clerk">Liquor Clerk</option>
+    <option value="Loader">Loader</option>
+    <option value="Loan Assistant">Loan Assistant</option>
+    <option value="Loan Processor">Loan Processor</option>
+    <option value="Local Sherwood">Local Sherwood</option>
+    <option value="Locksmith">Locksmith</option>
+    <option value="Locum Hospitalist">Locum Hospitalist</option>
+    <option value="Logistics Clerk">Logistics Clerk</option>
+    <option value="Logistics Technician">Logistics Technician</option>
+    <option value="Loss Prevention">Loss Prevention</option>
+    <option value="Lot Driver">Lot Driver</option>
+    <option value="Lot Manager">Lot Manager</option>
+    <option value="Lot Specialist">Lot Specialist</option>
+    <option value="LP Agent">LP Agent</option>
+    <option value="Lumper">Lumper</option>
+    <option value="Machine Assembler">Machine Assembler</option>
+    <option value="Machine Assistant">Machine Assistant</option>
+    <option value="Machine Builder">Machine Builder</option>
+   <option value="Machine Learning">Machine Learning</option>
+    <option value="Machine Learning Developer">Machine Learning Developer</option>
+    <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+    <option value="Machine Learning QA Engineer">Machine Learning QA Engineer</option>
+    <option value="Machine Learning Research Engineer">Machine Learning Research Engineer</option>
+    <option value="Machine Learning Scientist">Machine Learning Scientist</option>
+    <option value="Machine Learning Software Engineer">Machine Learning Software Engineer</option>
+    <option value="Machine Maintenance Mechanic">Machine Maintenance Mechanic</option>
+    <option value="Machine Technician">Machine Technician</option>
+    <option value="Machinist">Machinist</option>
+    <option value="Mail Inserting Clerk">Mail Inserting Clerk</option>
+    <option value="Mail Processor">Mail Processor</option>
+    <option value="Maintenance Apprentice">Maintenance Apprentice</option>
+    <option value="Maintenance Assistant">Maintenance Assistant</option>
+    <option value="Maintenance Engineer">Maintenance Engineer</option>
+    <option value="Maintenance Staff">Maintenance Staff</option>
+    <option value="Major Account Manager">Major Account Manager</option>
+    <option value="Management Assistant">Management Assistant</option>
+    <option value="Manager Deli">Manager Deli</option>
+    <option value="Manager Finance">Manager Finance</option>
+    <option value="Manager Front End">Manager Front End</option>
+    <option value="Manager Grocery">Manager Grocery</option>
+    <option value="Manager of Applications Development">Manager of Applications Development</option>
+    <option value="Manager of Sales">Manager of Sales</option>
+    <option value="Manager Safety">Manager Safety</option>
+    <option value="Manual Test Engineer">Manual Test Engineer</option>
+    <option value="Manufacturing Operator">Manufacturing Operator</option>
+    <option value="Marine Mechanic">Marine Mechanic</option>
+    <option value="Marketer">Marketer</option>
+    <option value="Marketing Analyst">Marketing Analyst</option>
+    <option value="Marketing and Communications Specialist">Marketing and Communications Specialist</option>
+    <option value="Marketing Campaign Manager">Marketing Campaign Manager</option>
+    <option value="Marketing Intern">Marketing Intern</option>
+    <option value="Marketing Specialist">Marketing Specialist</option>
+    <option value="Market Researcher">Market Researcher</option>
+    <option value="Mason">Mason</option>
+    <option value="Master Technician">Master Technician</option>
+    <option value="Material Planner">Material Planner</option>
+    <option value="Materials Specialist">Materials Specialist</option>
+    <option value="Maths Teacher">Maths Teacher</option>
+    <option value="Meat Manager">Meat Manager</option>
+    <option value="Mechanical Fitter">Mechanical Fitter</option>
+    <option value="Mechanic">Mechanic</option>
+    <option value="Media Analyst">Media Analyst</option>
+    <option value="Medical Administrative">Medical Administrative</option>
+    <option value="Medical Aesthetician">Medical Aesthetician</option>
+    <option value="Medical Assistant">Medical Assistant</option>
+    <option value="Medical Call Center">Medical Call Center</option>
+    <option value="Medical Director">Medical Director</option>
+    <option value="Medical Lab Assistant">Medical Lab Assistant</option>
+    <option value="Medical Manager">Medical Manager</option>
+    <option value="Medical Scientist">Medical Scientist</option>
+    <option value="Medical Writer">Medical Writer</option>
+    <option value="Mental Health Therapist">Mental Health Therapist</option>
+    <option value="Merchandiser">Merchandiser</option>
+    <option value="Merchandise Specialist">Merchandise Specialist</option>
+    <option value="Metallier">Metallier</option>
+    <option value="Microschool Teacher">Microschool Teacher</option>
+    <option value="Microsoft Sales Specialist">Microsoft Sales Specialist</option>
+    <option value="Microsoft Support">Microsoft Support</option>
+    <option value="Mobile App Developer">Mobile App Developer</option>
+    <option value="Mobile Back End">Mobile Back End</option>
+    <option value="Mobile Mechanic">Mobile Mechanic</option>
+    <option value="Mobile Security Guard">Mobile Security Guard</option>
+    <option value="Mold Operator">Mold Operator</option>
+    <option value="Moodle Developer">Moodle Developer</option>
+    <option value="Move Manager">Move Manager</option>
+    <option value="Mover">Mover</option>
+    <option value="MPS Specialist">MPS Specialist</option>
+    <option value="Multi Skilled Engineer">Multi Skilled Engineer</option>
+    <option value="Music Teacher">Music Teacher</option>
+    <option value="National Account Coordinator">National Account Coordinator</option>
+    <option value="National Buyer">National Buyer</option>
+    <option value="National Sales Manager">National Sales Manager</option>
+    <option value="Net Technician">Net Technician</option>
+    <option value="Network Architect">Network Architect</option>
+    <option value="Network Designer">Network Designer</option>
+    <option value="Network Engineer">Network Engineer</option>
+    <option value="Network Project Coordinator">Network Project Coordinator</option>
+    <option value="Network Security Consultant">Network Security Consultant</option>
+    <option value="Network Specialist">Network Specialist</option>
+    <option value="Network Technician">Network Technician</option>
+    <option value="News Editor">News Editor</option>
+    <option value="NLP Engineer">NLP Engineer</option>
+    <option value="NOC Technician">NOC Technician</option>
+    <option value="NPR Monitor">NPR Monitor</option>
+    <option value="Nuclear Safety Engineer">Nuclear Safety Engineer</option>
+    <option value="Nurse">Nurse</option>
+    <option value="Nurse Clinician">Nurse Clinician</option>
+    <option value="Nursery Chef">Nursery Chef</option>
+    <option value="Nutritional Therapist">Nutritional Therapist</option>
+    <option value="Nutritionist">Nutritionist</option>
+    <option value="Office 365 Administrator">Office 365 Administrator</option>
+    <option value="Office Administrator">Office Administrator</option>
+    <option value="Office Assistant">Office Assistant</option>
+    <option value="Office Coordinator">Office Coordinator</option>
+    <option value="Office Supervisor">Office Supervisor</option>
+    <option value="Onboarding Coordinator">Onboarding Coordinator</option>
+    <option value="Oncologist">Oncologist</option>
+    <option value="Online English Teacher">Online English Teacher</option>
+    <option value="Online Executive">Online Executive</option>
+    <option value="Online Math Coach">Online Math Coach</option>
+    <option value="Online Math Teacher">Online Math Teacher</option>
+    <option value="Online Teacher">Online Teacher</option>
+    <option value="Onsite Manager">Onsite Manager</option>
+    <option value="Onsite Recruiter">Onsite Recruiter</option>
+    <option value="Operating Engineer">Operating Engineer</option>
+    <option value="Operating Room Technician">Operating Room Technician</option>
+    <option value="Operational Leader">Operational Leader</option>
+    <option value="Operations Analyst">Operations Analyst</option>
+    <option value="Operations Control Analyst">Operations Control Analyst</option>
+    <option value="Operations Engineer">Operations Engineer</option>
+    <option value="Operations Processor">Operations Processor</option>
+    <option value="Operations Staff">Operations Staff</option>
+    <option value="Operations Support Agent">Operations Support Agent</option>
+    <option value="Operations Trainer">Operations Trainer</option>
+    <option value="Ophthalmologist">Ophthalmologist</option>
+    <option value="OPS Coordinator">OPS Coordinator</option>
+    <option value="Optical Manager">Optical Manager</option>
+    <option value="Optician">Optician</option>
+    <option value="Optometrist">Optometrist</option>
+    <option value="Oracle Dba">Oracle Dba</option>
+    <option value="Oracle Developer">Oracle Developer</option>
+    <option value="Order Filler">Order Filler</option>
+    <option value="Order Management">Order Management</option>
+    <option value="Order Selector">Order Selector</option>
+    <option value="OSP Construction Manager">OSP Construction Manager</option>
+    <option value="OT Integration Specialist">OT Integration Specialist</option>
+    <option value="Outbound Lead">Outbound Lead</option>
+    <option value="Outpatient Therapist">Outpatient Therapist</option>
+    <option value="Outsourcing Manager">Outsourcing Manager</option>
+    <option value="Owner Operator">Owner Operator</option>
+    <option value="Package Designer">Package Designer</option>
+    <option value="Packager">Packager</option>
+    <option value="Packaging Assembler">Packaging Assembler</option>
+    <option value="Packaging Engineer">Packaging Engineer</option>
+    <option value="Packaging Mechanic">Packaging Mechanic</option>
+    <option value="Packer">Packer</option>
+    <option value="Paid Media Executive">Paid Media Executive</option>
+    <option value="Paid Social Specialist">Paid Social Specialist</option>
+    <option value="Painter">Painter</option>
+    <option value="Pallet Builder">Pallet Builder</option>
+    <option value="Paralegal">Paralegal</option>
+    <option value="Parking Attendant">Parking Attendant</option>
+    <option value="Park Manager">Park Manager</option>
+    <option value="Partner Account Executive">Partner Account Executive</option>
+    <option value="Partner Engineer">Partner Engineer</option>
+    <option value="Partner Marketing Specialist">Partner Marketing Specialist</option>
+    <option value="Parts Advisor">Parts Advisor</option>
+    <option value="Parts Counter">Parts Counter</option>
+    <option value="Parts Manager">Parts Manager</option>
+    <option value="Parts Person">Parts Person</option>
+    <option value="Parts Room Associate">Parts Room Associate</option>
+    <option value="Party Chief">Party Chief</option>
+    <option value="Pastor">Pastor</option>
+    <option value="Pathologist">Pathologist</option>
+    <option value="Pathology Technician">Pathology Technician</option>
+    <option value="Patient Advocate">Patient Advocate</option>
+    <option value="Patient Care Associate">Patient Care Associate</option>
+    <option value="Patient Care Manager">Patient Care Manager</option>
+    <option value="Patient Coordinator">Patient Coordinator</option>
+    <option value="Patient Navigator">Patient Navigator</option>
+    <option value="Patient Services Specialist">Patient Services Specialist</option>
+    <option value="Patrol Officer">Patrol Officer</option>
+    <option value="Pavement Engineer">Pavement Engineer</option>
+    <option value="Payment Processor">Payment Processor</option>
+    <option value="Payroll and Benefits Manager">Payroll and Benefits Manager</option>
+    <option value="Payroll Lead">Payroll Lead</option>
+    <option value="Payroll Technician">Payroll Technician</option>
+    <option value="PC Technician">PC Technician</option>
+    <option value="Pediatric Cardiologist">Pediatric Cardiologist</option>
+    <option value="Pediatric Nurse">Pediatric Nurse</option>
+    <option value="Peer Counselor">Peer Counselor</option>
+    <option value="Pension Analyst">Pension Analyst</option>
+    <option value="Perception Engineer">Perception Engineer</option>
+    <option value="Performance Engineer">Performance Engineer</option>
+    <option value="Perfusionist">Perfusionist</option>
+    <option value="Personal Banker">Personal Banker</option>
+    <option value="Personal Care Aide">Personal Care Aide</option>
+    <option value="Personal Driver">Personal Driver</option>
+    <option value="Personal Lines Broker">Personal Lines Broker</option>
+    <option value="Pet Bather">Pet Bather</option>
+    <option value="Pet Stylist">Pet Stylist</option>
+    <option value="Pharmacist">Pharmacist</option>
+    <option value="Pharmacist Technician">Pharmacist Technician</option>
+    <option value="Pharmacy Assistant">Pharmacy Assistant</option>
+    <option value="Pharmacy Coordinator">Pharmacy Coordinator</option>
+    <option value="Pharmacy Technician">Pharmacy Technician</option>
+    <option value="Phlebotomist">Phlebotomist</option>
+    <option value="Phone Banker">Phone Banker</option>
+    <option value="Photo Editor">Photo Editor</option>
+    <option value="Photographer">Photographer</option>
+    <option value="PHP Developer">PHP Developer</option>
+    <option value="PHP Engineer">PHP Engineer</option>
+    <option value="PHP Web Developer">PHP Web Developer</option>
+    <option value="Physiatrist">Physiatrist</option>
+    <option value="Physical Design Engineer">Physical Design Engineer</option>
+    <option value="Physical Scientist">Physical Scientist</option>
+    <option value="Physical Therapist">Physical Therapist</option>
+    <option value="Physician">Physician</option>
+    <option value="Physics Professor">Physics Professor</option>
+    <option value="Physiotherapist">Physiotherapist</option>
+    <option value="Pianist">Pianist</option>
+    <option value="Piano Teacher">Piano Teacher</option>
+    <option value="Pilot">Pilot</option>
+    <option value="Pipeline Developer">Pipeline Developer</option>
+    <option value="Pipeline Engineer">Pipeline Engineer</option>
+    <option value="Pipeline Integrity Engineer">Pipeline Integrity Engineer</option>
+    <option value="Pipeline Technician">Pipeline Technician</option>
+    <option value="Piping Designer">Piping Designer</option>
+    <option value="Placement Coordinator">Placement Coordinator</option>
+    <option value="Planner">Planner</option>
+    <option value="Planning Manager">Planning Manager</option>
+    <option value="Plant Engineer">Plant Engineer</option>
+    <option value="Plant Foreman">Plant Foreman</option>
+    <option value="Plant HR Manager">Plant HR Manager</option>
+    <option value="Plasterer">Plasterer</option>
+    <option value="Platform Architect">Platform Architect</option>
+    <option value="Platform Developer">Platform Developer</option>
+    <option value="Platform Product Manager">Platform Product Manager</option>
+    <option value="Platform Team Lead">Platform Team Lead</option>
+    <option value="PLC Programmer">PLC Programmer</option>
+    <option value="PL SQL Developer">PL SQL Developer</option>
+    <option value="Plumber">Plumber</option>
+    <option value="Plumbing Inspector">Plumbing Inspector</option>
+    <option value="PMO Analyst">PMO Analyst</option>
+    <option value="Podiatrist">Podiatrist</option>
+    <option value="Police Chief">Police Chief</option>
+    <option value="Police Detective">Police Detective</option>
+    <option value="Police Officer">Police Officer</option>
+    <option value="Polisher">Polisher</option>
+    <option value="Pool Lifeguard">Pool Lifeguard</option>
+    <option value="Porter">Porter</option>
+    <option value="Portfolio Administrator">Portfolio Administrator</option>
+    <option value="Postal Clerk">Postal Clerk</option>
+    <option value="Potter">Potter</option>
+    <option value="Power Plant Operator">Power Plant Operator</option>
+    <option value="PPC Specialist">PPC Specialist</option>
+    <option value="Practical Nurse">Practical Nurse</option>
+    <option value="PRE Commissioning Lead">PRE Commissioning Lead</option>
+    <option value="Premises Liability">Premises Liability</option>
+    <option value="Prep Cook">Prep Cook</option>
+    <option value="Prescaler">Prescaler</option>
+    <option value="Preschool Teacher">Preschool Teacher</option>
+    <option value="Pressman">Pressman</option>
+    <option value="PR Executive">PR Executive</option>
+    <option value="Pricing Manager">Pricing Manager</option>
+    <option value="Primary Teacher">Primary Teacher</option>
+    <option value="Primary Therapist">Primary Therapist</option>
+    <option value="Principal Biostatistician">Principal Biostatistician</option>
+    <option value="Principal Developer">Principal Developer</option>
+    <option value="Principal Optical Engineer">Principal Optical Engineer</option>
+    <option value="Principal Scientist">Principal Scientist</option>
+    <option value="Principal Software Architect">Principal Software Architect</option>
+    <option value="Principal Statistician">Principal Statistician</option>
+    <option value="Principal UX Designer">Principal UX Designer</option>
+    <option value="Print Operator">Print Operator</option>
+    <option value="Privacy Engineer">Privacy Engineer</option>
+    <option value="Private Chef">Private Chef</option>
+    <option value="Private Nanny">Private Nanny</option>
+    <option value="Probation Officer">Probation Officer</option>
+    <option value="Procedure Writer">Procedure Writer</option>
+    <option value="Process Engineering Manager">Process Engineering Manager</option>
+    <option value="Process Manager">Process Manager</option>
+    <option value="Procurement Clerk">Procurement Clerk</option>
+    <option value="Producer">Producer</option>
+    <option value="Product Developer">Product Developer</option>
+    <option value="Production Artist">Production Artist</option>
+    <option value="Production Editor">Production Editor</option>
+    <option value="Production Lead">Production Lead</option>
+    <option value="Production Runner">Production Runner</option>
+    <option value="Product Lead">Product Lead</option>
+    <option value="Product MGR">Product MGR</option>
+    <option value="Product Specialist">Product Specialist</option>
+    <option value="Professional Engineer">Professional Engineer</option>
+    <option value="Professional Services">Professional Services</option>
+    <option value="Professor">Professor</option>
+    <option value="Program Analyst">Program Analyst</option>
+    <option value="Program Director">Program Director</option>
+    <option value="Program Evaluator">Program Evaluator</option>
+    <option value="Programmer">Programmer</option>
+    <option value="Program Planner">Program Planner</option>
+    <option value="Program Scheduler">Program Scheduler</option>
+    <option value="Project Accountant">Project Accountant</option>
+    <option value="Project Account Manager">Project Account Manager</option>
+    <option value="Project Controls">Project Controls</option>
+    <option value="Project Officer">Project Officer</option>
+    <option value="Project Surveyor">Project Surveyor</option>
+    <option value="Proofreader">Proofreader</option>
+     <option value="Proposal Writer">Proposal Writer</option>
+    <option value="Prosthodontist">Prosthodontist</option>
+    <option value="PSW Supervisor">PSW Supervisor</option>
+    <option value="Psychiatrist">Psychiatrist</option>
+    <option value="Psychological Assistant">Psychological Assistant</option>
+    <option value="Psychologist">Psychologist</option>
+    <option value="Psychology Professor">Psychology Professor</option>
+    <option value="Psychology Teacher">Psychology Teacher</option>
+    <option value="Psychometrician">Psychometrician</option>
+    <option value="Psychometrist">Psychometrist</option>
+    <option value="Psychotherapist">Psychotherapist</option>
+    <option value="Python Automation Engineer">Python Automation Engineer</option>
+    <option value="Python Backend Developer">Python Backend Developer</option>
+    <option value="Python Developer">Python Developer</option>
+    <option value="Python Engineer">Python Engineer</option>
+    <option value="Python Machine Learning Engineer">Python Machine Learning Engineer</option>
+    <option value="Python Software Engineer">Python Software Engineer</option>
+    <option value="QA Analyst">QA Analyst</option>
+    <option value="QA Associate">QA Associate</option>
+    <option value="QA Developer">QA Developer</option>
+    <option value="QA Engineer">QA Engineer</option>
+    <option value="QA Game Tester">QA Game Tester</option>
+    <option value="QA Programmer">QA Programmer</option>
+    <option value="QA Software Engineer">QA Software Engineer</option>
+    <option value="QA Software Tester">QA Software Tester</option>
+    <option value="QC Scientist">QC Scientist</option>
+    <option value="QC Technician">QC Technician</option>
+    <option value="Qualitative Research Director">Qualitative Research Director</option>
+    <option value="Quality Analyst">Quality Analyst</option>
+    <option value="Quality Assurance Consultant">Quality Assurance Consultant</option>
+    <option value="Quality Auditor">Quality Auditor</option>
+    <option value="Quality Control Engineer">Quality Control Engineer</option>
+    <option value="Quality Controller">Quality Controller</option>
+    <option value="Quality Engineer">Quality Engineer</option>
+    <option value="Quality Lead">Quality Lead</option>
+    <option value="Quality Specialist">Quality Specialist</option>
+    <option value="Quality Technician">Quality Technician</option>
+    <option value="Quantity Surveyor">Quantity Surveyor</option>
+    <option value="Quotations Specialist">Quotations Specialist</option>
+    <option value="Radar Systems Engineer">Radar Systems Engineer</option>
+    <option value="Radar Technician">Radar Technician</option>
+    <option value="Radio Announcer">Radio Announcer</option>
+    <option value="Radiologist">Radiologist</option>
+    <option value="Radio Producer">Radio Producer</option>
+    <option value="Rail Engineer">Rail Engineer</option>
+    <option value="Rancher">Rancher</option>
+    <option value="Ranger">Ranger</option>
+    <option value="R&D Scientist">R&D Scientist</option>
+    <option value="Reach Forklift">Reach Forklift</option>
+    <option value="Reach Truck">Reach Truck</option>
+    <option value="React Developer">React Developer</option>
+    <option value="React Engineer">React Engineer</option>
+    <option value="React Native Developer">React Native Developer</option>
+    <option value="Reactor Operator">Reactor Operator</option>
+    <option value="React UI Developer">React UI Developer</option>
+    <option value="Reader">Reader</option>
+    <option value="Ready Mix Driver">Ready Mix Driver</option>
+    <option value="Real Estate Law Clerk">Real Estate Law Clerk</option>
+    <option value="Real Estate Salesperson">Real Estate Salesperson</option>
+    <option value="Receiver">Receiver</option>
+    <option value="Receiver PT">Receiver PT</option>
+    <option value="Receiving Lead">Receiving Lead</option>
+    <option value="Receptionist">Receptionist</option>
+    <option value="Reception Teacher">Reception Teacher</option>
+    <option value="Records Clerk">Records Clerk</option>
+    <option value="Recreation Director">Recreation Director</option>
+    <option value="Recreation Therapist">Recreation Therapist</option>
+    <option value="Recruiter">Recruiter</option>
+    <option value="Recruiting Assistant">Recruiting Assistant</option>
+    <option value="Recruiting Associate">Recruiting Associate</option>
+    <option value="Recruiting Consultant">Recruiting Consultant</option>
+    <option value="Recruiting Coordinator">Recruiting Coordinator</option>
+    <option value="Recruiting Manager">Recruiting Manager</option>
+    <option value="Recruiting Specialist">Recruiting Specialist</option>
+    <option value="Recruitment Administrator">Recruitment Administrator</option>
+    <option value="Recruitment Assistant">Recruitment Assistant</option>
+    <option value="Recruitment Coordinator">Recruitment Coordinator</option>
+    <option value="Recruitment Manager">Recruitment Manager</option>
+    <option value="Recruitment Officer">Recruitment Officer</option>
+    <option value="Recruitment Specialist">Recruitment Specialist</option>
+    <option value="Recycler">Recycler</option>
+    <option value="Referee">Referee</option>
+    <option value="Refrigeration Mechanic">Refrigeration Mechanic</option>
+    <option value="Regional Director">Regional Director</option>
+    <option value="Regional HR Manager">Regional HR Manager</option>
+    <option value="Registered Associate">Registered Associate</option>
+    <option value="Registered Manager">Registered Manager</option>
+    <option value="Registrar">Registrar</option>
+    <option value="Regulatory Analyst">Regulatory Analyst</option>
+    <option value="Regulatory Engineer">Regulatory Engineer</option>
+    <option value="Rehab Technician">Rehab Technician</option>
+    <option value="Reliability Specialist">Reliability Specialist</option>
+    <option value="Render Wrangler">Render Wrangler</option>
+    <option value="Rental Agent">Rental Agent</option>
+    <option value="Repacker">Repacker</option>
+    <option value="Reports Coordinator">Reports Coordinator</option>
+    <option value="Researcher">Researcher</option>
+    <option value="Research Programmer">Research Programmer</option>
+    <option value="Reservations Agent">Reservations Agent</option>
+    <option value="Residential Framer">Residential Framer</option>
+    <option value="Resolutions Specialist">Resolutions Specialist</option>
+    <option value="Resource Specialist">Resource Specialist</option>
+    <option value="Respiratory Therapist">Respiratory Therapist</option>
+    <option value="Restaurant Manager">Restaurant Manager</option>
+    <option value="Retail Assistant">Retail Assistant</option>
+    <option value="Retail Director">Retail Director</option>
+    <option value="Retail Pharmacist">Retail Pharmacist</option>
+    <option value="Retail Sales Clerk">Retail Sales Clerk</option>
+    <option value="Retail Specialist">Retail Specialist</option>
+    <option value="RE Teacher">RE Teacher</option>
+    <option value="Retirement Specialist">Retirement Specialist</option>
+    <option value="Reverse Engineer">Reverse Engineer</option>
+    <option value="Reviewer">Reviewer</option>
+    <option value="Risk Consultant">Risk Consultant</option>
+    <option value="Robotic Welder">Robotic Welder</option>
+    <option value="Room Attendants">Room Attendants</option>
+    <option value="Route Manager">Route Manager</option>
+    <option value="Runner">Runner</option>
+    <option value="Safety Advisor">Safety Advisor</option>
+    <option value="Safety Assistant">Safety Assistant</option>
+    <option value="Safety Data Specialist">Safety Data Specialist</option>
+    <option value="Safety Engineer">Safety Engineer</option>
+    <option value="Safety Specialist">Safety Specialist</option>
+    <option value="Sales Administrator">Sales Administrator</option>
+    <option value="Sales and Marketing Specialist">Sales and Marketing Specialist</option>
+    <option value="Sales Assistant">Sales Assistant</option>
+    <option value="Sales Consultant">Sales Consultant</option>
+    <option value="Sales Director">Sales Director</option>
+    <option value="Salesforce Engineer">Salesforce Engineer</option>
+    <option value="Sales Intern">Sales Intern</option>
+    <option value="Salesman">Salesman</option>
+    <option value="Sales Manager">Sales Manager</option>
+    <option value="Sales Officer">Sales Officer</option>
+    <option value="Sales Professional">Sales Professional</option>
+    <option value="Sales Specialist">Sales Specialist</option>
+    <option value="Sales Team Lead">Sales Team Lead</option>
+    <option value="Sales Trainer">Sales Trainer</option>
+    <option value="Sanitation Lead">Sanitation Lead</option>
+    <option value="SAP Developer">SAP Developer</option>
+    <option value="SAS Programmer">SAS Programmer</option>
+    <option value="Scanner">Scanner</option>
+    <option value="School Aide">School Aide</option>
+    <option value="School Nurse">School Nurse</option>
+    <option value="School Psychologist">School Psychologist</option>
+    <option value="Scientist">Scientist</option>
+    <option value="Screener">Screener</option>
+    <option value="Seafood Clerk">Seafood Clerk</option>
+    <option value="Seasonal Cashier">Seasonal Cashier</option>
+    <option value="Seasonal Events Outfitter">Seasonal Events Outfitter</option>
+    <option value="Seasonal Photographer">Seasonal Photographer</option>
+    <option value="Seasonal Stylist">Seasonal Stylist</option>
+    <option value="Secretary">Secretary</option>
+    <option value="Security Administrator">Security Administrator</option>
+    <option value="Security Assistant">Security Assistant</option>
+    <option value="Security Manager">Security Manager</option>
+    <option value="Security Researcher">Security Researcher</option>
+    <option value="SEM Manager">SEM Manager</option>
+    <option value="Sen Teacher">Sen Teacher</option>
+    <option value="SEO Director">SEO Director</option>
+    <option value="SEO Manager">SEO Manager</option>
+    <option value="SEO Strategist">SEO Strategist</option>
+    <option value="Server">Server</option>
+    <option value="Service Assistant">Service Assistant</option>
+    <option value="Service Coordinator">Service Coordinator</option>
+    <option value="Service Detailer">Service Detailer</option>
+    <option value="Servicenow Developer">Servicenow Developer</option>
+    <option value="Service Porter">Service Porter</option>
+    <option value="Service Specialist">Service Specialist</option>
+    <option value="Sewer">Sewer</option>
+    <option value="Sheriff">Sheriff</option>
+    <option value="Ship Fitter">Ship Fitter</option>
+    <option value="Shipper">Shipper</option>
+    <option value="Shopper">Shopper</option>
+    <option value="Siding Installer">Siding Installer</option>
+    <option value="Singer">Singer</option>
+    <option value="Site Quality Manager">Site Quality Manager</option>
+    <option value="Ski Patrol">Ski Patrol</option>
+    <option value="SMT Operator">SMT Operator</option>
+    <option value="SMTS Firmware Engineer">SMTS Firmware Engineer</option>
+    <option value="Social Community Manager">Social Community Manager</option>
+    <option value="Social Media and Marketing Intern">Social Media and Marketing Intern</option>
+    <option value="Social Media Assistant">Social Media Assistant</option>
+    <option value="Social Media Executive">Social Media Executive</option>
+    <option value="Social Scientist">Social Scientist</option>
+    <option value="Sociology Professor">Sociology Professor</option>
+    <option value="Software Analyst">Software Analyst</option>
+    <option value="Software Application Developer">Software Application Developer</option>
+    <option value="Software Architect">Software Architect</option>
+    <option value="Software Configuration Manager">Software Configuration Manager</option>
+    <option value="Software Data Engineer">Software Data Engineer</option>
+    <option value="Software Developer Backend">Software Developer Backend</option>
+    <option value="Software Developer Full Stack Javascript">Software Developer Full Stack Javascript</option>
+    <option value="Software Developer In Test">Software Developer In Test</option>
+   <option value="Software Engineer">Software Engineer</option>
+    <option value="Software Manager">Software Manager</option>
+    <option value="Software Programmer">Software Programmer</option>
+    <option value="Software QA Manager">Software QA Manager</option>
+    <option value="Software Sales Executive">Software Sales Executive</option>
+    <option value="Software Security Architect">Software Security Architect</option>
+    <option value="Software Specialist">Software Specialist</option>
+    <option value="Software Support Technician">Software Support Technician</option>
+    <option value="Software Tester">Software Tester</option>
+    <option value="Software Work Package Manager">Software Work Package Manager</option>
+    <option value="Solar Installer">Solar Installer</option>
+    <option value="Solderer">Solderer</option>
+    <option value="Solicitor">Solicitor</option>
+    <option value="Solution Designer">Solution Designer</option>
+    <option value="Solution Engineer">Solution Engineer</option>
+    <option value="Solutions IT Designer">Solutions IT Designer</option>
+    <option value="SPA Therapist">SPA Therapist</option>
+    <option value="Specialist Property">Specialist Property</option>
+    <option value="Specification Writer">Specification Writer</option>
+    <option value="Speech Writer">Speech Writer</option>
+    <option value="Sports Anchor">Sports Anchor</option>
+    <option value="Spotter">Spotter</option>
+    <option value="Spray Painter">Spray Painter</option>
+    <option value="SRE Engineer">SRE Engineer</option>
+    <option value="Staffing Manager">Staffing Manager</option>
+    <option value="Stagehand">Stagehand</option>
+    <option value="Steamfitter">Steamfitter</option>
+    <option value="Stock Lead">Stock Lead</option>
+    <option value="Stock Specialist">Stock Specialist</option>
+    <option value="Store Cashier">Store Cashier</option>
+    <option value="Stores Officer">Stores Officer</option>
+    <option value="Strategic Planner">Strategic Planner</option>
+    <option value="Strategy Intern">Strategy Intern</option>
+    <option value="Structural Drafter">Structural Drafter</option>
+    <option value="Student Worker">Student Worker</option>
+    <option value="Studio Assistant">Studio Assistant</option>
+    <option value="Stylist">Stylist</option>
+    <option value="Supplier Manager">Supplier Manager</option>
+    <option value="Supply Chain Manager">Supply Chain Manager</option>
+    <option value="Support Staff">Support Staff</option>
+    <option value="Surintendant">Surintendant</option>
+    <option value="SW Engineer">SW Engineer</option>
+    <option value="System Security Engineer">System Security Engineer</option>
+    <option value="Systems Engineer">Systems Engineer</option>
+    <option value="Systems Specialist">Systems Specialist</option>
+    <option value="System Tester">System Tester</option>
+    <option value="Tailor">Tailor</option>
+    <option value="Tanker Driver">Tanker Driver</option>
+    <option value="Target Security Specialist">Target Security Specialist</option>
+    <option value="Tax Accountant">Tax Accountant</option>
+    <option value="Tax Assistant">Tax Assistant</option>
+    <option value="Tax Intern">Tax Intern</option>
+    <option value="Tax Manager">Tax Manager</option>
+    <option value="Taxonomist">Taxonomist</option>
+    <option value="Teamster">Teamster</option>
+    <option value="Tech Assistant">Tech Assistant</option>
+    <option value="Tech Lead">Tech Lead</option>
+    <option value="Technical Analyst">Technical Analyst</option>
+    <option value="Technical Consultant">Technical Consultant</option>
+    <option value="Technical Illustrator">Technical Illustrator</option>
+    <option value="Technical Operator">Technical Operator</option>
+    <option value="Technical Recruiter">Technical Recruiter</option>
+    <option value="Technical Services Engineer">Technical Services Engineer</option>
+    <option value="Technical Supervisor">Technical Supervisor</option>
+    <option value="Technical Team Lead">Technical Team Lead</option>
+    <option value="Technician">Technician</option>
+    <option value="Technologist">Technologist</option>
+    <option value="Technology Officer">Technology Officer</option>
+    <option value="Technology Teacher">Technology Teacher</option>
+    <option value="Technology Trainer">Technology Trainer</option>
+    <option value="Teleconseiller">Teleconseiller</option>
+    <option value="Telemarketer">Telemarketer</option>
+    <option value="Teller">Teller</option>
+    <option value="Terrestrial Biologist">Terrestrial Biologist</option>
+    <option value="Test Analyst">Test Analyst</option>
+    <option value="Tester">Tester</option>
+    <option value="Therapist">Therapist</option>
+    <option value="Ticket Seller">Ticket Seller</option>
+    <option value="TMF Specialist">TMF Specialist</option>
+    <option value="Tour Guide">Tour Guide</option>
+    <option value="Trader">Trader</option>
+    <option value="Traffic Manager">Traffic Manager</option>
+    <option value="Trainer">Trainer</option>
+    <option value="Transcriber">Transcriber</option>
+    <option value="Transcriptionist">Transcriptionist</option>
+    <option value="Transportation Planner">Transportation Planner</option>
+    <option value="Treasury Analyst">Treasury Analyst</option>
+    <option value="Trial Attorney">Trial Attorney</option>
+    <option value="Trustee">Trustee</option>
+    <option value="Tutor">Tutor</option>
+    <option value="UAT Tester">UAT Tester</option>
+    <option value="UC Engineer">UC Engineer</option>
+    <option value="UI Designer">UI Designer</option>
+    <option value="UI Developer">UI Developer</option>
+    <option value="UI Software Engineer">UI Software Engineer</option>
+    <option value="Ultrasound Technologist">Ultrasound Technologist</option>
+    <option value="Underground Electrician">Underground Electrician</option>
+    <option value="Underwriter">Underwriter</option>
+    <option value="Underwriting Manager">Underwriting Manager</option>
+    <option value="Underwriting Technician">Underwriting Technician</option>
+    <option value="Unit Controller">Unit Controller</option>
+    <option value="Unity Developer">Unity Developer</option>
+    <option value="Unix Administrator">Unix Administrator</option>
+    <option value="Unix Engineer">Unix Engineer</option>
+    <option value="Unloader">Unloader</option>
+    <option value="UPS Driver">UPS Driver</option>
+    <option value="Urban Designer">Urban Designer</option>
+    <option value="Urban Planner">Urban Planner</option>
+    <option value="Urologist">Urologist</option>
+    <option value="User Experience">User Experience</option>
+    <option value="User Support Technician">User Support Technician</option>
+    <option value="Utility Employee">Utility Employee</option>
+    <option value="Utility Laborer">Utility Laborer</option>
+    <option value="Utility Technician">Utility Technician</option>
+    <option value="Utility Worker">Utility Worker</option>
+    <option value="UX Architect">UX Architect</option>
+    <option value="UX Designer">UX Designer</option>
+    <option value="UX Developer">UX Developer</option>
+    <option value="UX Engineer">UX Engineer</option>
+    <option value="UX UI Designer">UX UI Designer</option>
+    <option value="UX Writer">UX Writer</option>
+    <option value="Vaccinator">Vaccinator</option>
+    <option value="Validation Engineer">Validation Engineer</option>
+    <option value="Value Manager">Value Manager</option>
+    <option value="Van Driver">Van Driver</option>
+    <option value="Vault Teller">Vault Teller</option>
+    <option value="Vehicle Technician">Vehicle Technician</option>
+    <option value="Vendor">Vendor</option>
+    <option value="Venue Security">Venue Security</option>
+    <option value="Verification Engineer">Verification Engineer</option>
+    <option value="Vernick Fish Cook">Vernick Fish Cook</option>
+    <option value="Veterinarian">Veterinarian</option>
+    <option value="Vet Technician">Vet Technician</option>
+    <option value="VFX Supervisor">VFX Supervisor</option>
+    <option value="Video Editor">Video Editor</option>
+    <option value="Video Engineer">Video Engineer</option>
+    <option value="Video Journalist">Video Journalist</option>
+    <option value="Video Producer">Video Producer</option>
+    <option value="VIP Host">VIP Host</option>
+    <option value="Virtual Assistant">Virtual Assistant</option>
+    <option value="Virtual Barista">Virtual Barista</option>
+    <option value="Virtual Teacher">Virtual Teacher</option>
+    <option value="Visual Designer">Visual Designer</option>
+    <option value="Visual Manager">Visual Manager</option>
+    <option value="Vmware Administrator">Vmware Administrator</option>
+    <option value="Vmware Engineer">Vmware Engineer</option>
+    <option value="Vocational Evaluator">Vocational Evaluator</option>
+    <option value="Voice Engineer">Voice Engineer</option>
+    <option value="Volunteer">Volunteer</option>
+    <option value="VP of Customer Success">VP of Customer Success</option>
+    <option value="VP of Finance">VP of Finance</option>
+    <option value="VP of Sales">VP of Sales</option>
+    <option value="VP Product Marketing">VP Product Marketing</option>
+    <option value="VP Technology">VP Technology</option>
+    <option value="Vulnerability Researcher">Vulnerability Researcher</option>
+    <option value="Waiter">Waiter</option>
+    <option value="Waiting Staff">Waiting Staff</option>
+    <option value="Waitress">Waitress</option>
+    <option value="Wait Staff">Wait Staff</option>
+    <option value="Warehouse Administrator">Warehouse Administrator</option>
+    <option value="Warehouse Associate">Warehouse Associate</option>
+    <option value="Warehouse Employee">Warehouse Employee</option>
+    <option value="Warehouse Kitting">Warehouse Kitting</option>
+    <option value="Warehouseman">Warehouseman</option>
+    <option value="Warehouse Manager">Warehouse Manager</option>
+    <option value="Warehouse Outfitter">Warehouse Outfitter</option>
+    <option value="Warehouse Position">Warehouse Position</option>
+    <option value="Warehouse Selector">Warehouse Selector</option>
+    <option value="Warehouse Staff">Warehouse Staff</option>
+    <option value="Warehouse Trainer">Warehouse Trainer</option>
+    <option value="Warranty Administrator">Warranty Administrator</option>
+    <option value="Waste Water Operator">Waste Water Operator</option>
+    <option value="Watchmaker">Watchmaker</option>
+    <option value="Water Operator">Water Operator</option>
+    <option value="Wayleave Officer">Wayleave Officer</option>
+    <option value="Wealth Consultant">Wealth Consultant</option>
+    <option value="Web Administrator">Web Administrator</option>
+    <option value="Web Architect">Web Architect</option>
+    <option value="Web Designer">Web Designer</option>
+    <option value="Web Developer">Web Developer</option>
+    <option value="Web Engineer">Web Engineer</option>
+    <option value="Web Mapping Developer">Web Mapping Developer</option>
+    <option value="Web Optimization Analyst">Web Optimization Analyst</option>
+    <option value="Web Programmer">Web Programmer</option>
+    <option value="Web Security Analyst">Web Security Analyst</option>
+    <option value="Website Administrator">Website Administrator</option>
+    <option value="Website Developer">Website Developer</option>
+    <option value="Web Software Developer">Web Software Developer</option>
+    <option value="Web Specialist">Web Specialist</option>
+    <option value="Web Video Editor">Web Video Editor</option>
+    <option value="Wedding Planner">Wedding Planner</option>
+    <option value="Welder">Welder</option>
+    <option value="Welding Supervisor">Welding Supervisor</option>
+    <option value="Wellness Coach">Wellness Coach</option>
+    <option value="White Goods Engineer">White Goods Engineer</option>
+    <option value="Wholesaler">Wholesaler</option>
+    <option value="Window Assembler">Window Assembler</option>
+    <option value="Window Installer">Window Installer</option>
+    <option value="Windows Systems Engineer">Windows Systems Engineer</option>
+    <option value="Wiring Technician">Wiring Technician</option>
+    <option value="Wood Worker">Wood Worker</option>
+    <option value="Workforce Analyst">Workforce Analyst</option>
+    <option value="Working Foreman">Working Foreman</option>
+    <option value="Workplace Coordinator">Workplace Coordinator</option>
+    <option value="Workstation PC Technician">Workstation PC Technician</option>
+    <option value="Worship Leader">Worship Leader</option>
+    <option value="Wrapper">Wrapper</option>
+    <option value="Writer">Writer</option>
+    <option value="Xactimate Specialist">Xactimate Specialist</option>
+    <option value="Xamarin Developer">Xamarin Developer</option>
+    <option value="X Ray Technician">X Ray Technician</option>
+    <option value="X Ray Technologist">X Ray Technologist</option>
+    <option value="Yacht Broker">Yacht Broker</option>
+    <option value="Yard Attendant">Yard Attendant</option>
+    <option value="Yard Laborer">Yard Laborer</option>
+    <option value="Yard Worker">Yard Worker</option>
+    <option value="Yoga Instructor">Yoga Instructor</option>
+    <option value="Young Talent Program">Young Talent Program</option>
+    <option value="Youth Coordinator">Youth Coordinator</option>
+    <option value="Youth Specialist">Youth Specialist</option>
+    <option value="Youth Worker">Youth Worker</option>
+    <option value="Youtube Channel Growth Specialist">Youtube Channel Growth Specialist</option>
+    <option value="Zero Waste Captain">Zero Waste Captain</option>
+    <option value="Zookeeper">Zookeeper</option>
+    <option value="Zumba Instructor">Zumba Instructor</option>
+    <option value="Other">Other</option>
+  </select>
+    </div>
+    </br>
+      <div class="inputgroup">
+        <h6>Phone Number:</h6>
+        <input type="tel" placeholder="start with country code" name="phoneNum" required>
+      </div>
+         <div class="inputgroup">
+        <h6>Address:</h6>
+        <input type="text" placeholder="Enter your address" name="address" required>
+      </div>
+      <div class="inputgroup">
+        <h6>LinkedIn:</h6>
+        <input type="text" placeholder="Optional" name="linkedIn">
+      </div>
+       <div class="inputgroup">
+        <h6>Twitter:</h6>
+        <input type="text" placeholder="Optional" name="twitter">
+      </div>
+  <h5>EDUCATION</h5>
+  <hr/>
+           <div class="inputgroup">
+       <h6>University:</h6>
+       <select class="form-select" id="multiple-select-field4" name="uniOrSc" data-placeholder="Choose university" name="uni" required>
+    <option value="None">None</option>
+    <option value="King Saud University">King Saud University</option>
+    <option value="King Abdulaziz University">King Abdulaziz University</option>
+    <option value="King Abdullah University of Science Technology">King Abdullah University of Science and Technology</option>
+    <option value="King Fahd University of Petroleum Minerals">King Fahd University of Petroleum and Minerals</option>
+    <option value="Imam Abdulrahman Bin Faisal University">Imam Abdulrahman Bin Faisal University</option>
+      <option value="Taif University">Taif University</option>
+    <option value="King Khalid University">King Khalid University</option>
+    <option value="Umm Al Qura University">Umm Al Qura University</option>
+    <option value="Prince Sattam bin Abdulaziz University">Prince Sattam bin Abdulaziz University</option>
+    <option value="Taibah University">Taibah University</option>
+    <option value="Qassim University">Qassim University</option>
+    <option value="Princess Nourah Bint Abdulrahman University">Princess Nourah Bint Abdulrahman University</option>
+    <option value="Majmaah University">Majmaah University</option>
+    <option value="Prince Sultan University">Prince Sultan University</option>
+    <option value="Al Imam Muhammad Ibn Saud Islamic University">Al Imam Muhammad Ibn Saud Islamic University</option>
+    <option value="Tabuk Universtiy">Tabuk Universtiy</option>
+    <option value="Al Jouf University">Al Jouf University</option>
+    <option value="Jazan University">Jazan University</option>
+    <option value="University of Jeddah">University of Jeddah</option>
+    <option value="King Saud bin Abdulaziz University for Health Sciences">King Saud bin Abdulaziz University for Health Sciences</option>
+    <option value="University of Haail">University of Haail</option>
+    <option value="Alfaisal University">Alfaisal University</option>
+    <option value="Prince Mohammad Bin Fahd University">Prince Mohammad Bin Fahd University</option>
+    <option value="Najran University">Najran University</option>
+    <option value="College of Nursing and Allied Health Sciences">College of Nursing and Allied Health Sciences</option>
+    <option value="Al Baha University">Al Baha University</option>
+    <option value="King Faisal University">King Faisal University</option>
+    <option value="Shaqra University">Shaqra University</option>
+    <option value="Saudi Electronic University">Saudi Electronic University</option>
+    <option value="University of Northern Border">University of Northern Border</option>
+    <option value="Islamic University of Al Madinah">Islamic University of Al Madinah</option>
+    <option value="Bisha University">Bisha University</option>
+    <option value="University of Hafr Al Batin">University of Hafr Al Batin</option>
+         <option value="Effat University">Effat University</option>
+         <option value="Almaarefa University">Almaarefa University</option>
+         <option value="Royal Commission Yanbu Colleges Institutes">Royal Commission Yanbu Colleges and Institutes</option>
+         <option value="Jubail Industrial College">Jubail Industrial College</option>
+         <option value="Dar Al Uloom University">Dar Al Uloom University</option>
+         <option value="Al Yamamah University">Al Yamamah University</option>
+         <option value="Riyadh Colleges of Dentistry and Pharmacy">Riyadh Colleges of Dentistry and Pharmacy</option>
+         <option value="Prince Sultan Military College of Health Sciences">Prince Sultan Military College of Health Sciences</option>
+         <option value="University of Prince Mugrin">University of Prince Mugrin</option>
+         <option value="Institute of Public Administration">Institute of Public Administration</option>
+         <option value="University of Business and Technology">University of Business and Technology</option>
+         <option value="Ibn Sina National College for Medical Studies">Ibn Sina National College for Medical Studies</option>
+         <option value="Batterjee Medical College">Batterjee Medical College</option>
+         <option value="Naif Arab University for Security Sciences">Naif Arab University for Security Sciences</option>
+         <option value="Fahad Bin Sultan University">Fahad Bin Sultan University</option>
+         <option value="Arab Open University Saudi Arabia">Arab Open University Saudi Arabia</option>
+         <option value="Fakeeh College of Medical Sciences">Fakeeh College of Medical Sciences</option>
+         <option value="Vision Colleges">Vision Colleges</option>
+         <option value="Dar Al Hekma University">Dar Al Hekma University</option>
+         <option value="College of Technology at Riyadh">College of Technology at Riyadh</option>
+         <option value="Madinah Institute for Leadership and Entrepreneurship">Madinah Institute for Leadership and Entrepreneurship</option>
+         <option value="Jubail Technical Institute">Jubail Technical Institute</option>
+         <option value="Sulaiman Alrajhi Colleges">Sulaiman Alrajhi Colleges</option>
+         <option value="Arab East Colleges">Arab East Colleges</option>
+         <option value="Gulf Colleges">Gulf Colleges</option>
+         <option value="Colleges Farabi">Colleges Farabi</option>
+         <option value="Mustaqbal University Buraydah">Mustaqbal University Buraydah</option>
+         <option value="Dammam Community College">Dammam Community College</option>
+         <option value="Jeddah International College">Jeddah International College</option>
+         <option value="Ibn Rushd College for Management Sciences">Ibn Rushd College for Management Sciences</option>
+         <option value="Buraydah Private Colleges">Buraydah Private Colleges</option>
+         <option value="Imsimbi Training">Imsimbi Training</option>
+         <option value="Prince Sultan Aviation Academy">Prince Sultan Aviation Academy</option>
+         <option value="Applied Engineering College Riyadh">Applied Engineering College Riyadh</option>
+         <option value="Saad College of Nursing Allied Health Sciences">Saad College of Nursing and Allied Health Sciences</option>
+         <option value="Other">Other</option>
+  </select>
+      </div>
+    <div class="inputgroup">
+    <h6>Degree:</h6>
+  <select class="form-select" id="multiple-select-field2" data-placeholder="Choose degree" name="degree" required>
+    <option value="0"> None</option>
+    <option value="1"> Primary School</option>
+    <option value="2"> Middle School</option>
+    <option value="3"> High School</option>
+    <option value="4"> Associate</option>
+      <option value="5"> Bachelor</option>
+    <option value="6"> Master</option>
+    <option value="7"> Doctorate</option>
+  </select>
+    </div>
+                <div class="inputgroup">
+<h6>Major:</h6>
+   <select class="form-select" id="multiple-select-field3"  data-placeholder="Choose major" name="major" required>
+    <option value="None"> None</option>
+    <option value="Computer Science">Computer Science</option>
+    <option value="Psychology">Psychology</option>
+    <option value="Nursing">Nursing</option>
+    <option value="Medical">Medical</option>
+      <option value="Pharmacy">Pharmacy</option>
+    <option value="Public Health">Public Health</option>
+    <option value="Dentistry">Dentistry</option>
+    <option value="Veterinary Medicine">Veterinary Medicine</option>
+    <option value="Pediatrics">Pediatrics</option>
+    <option value="Ophthalmology">Ophthalmology</option>
+    <option value="Economics">Economics</option>
+    <option value="Biology">Biology</option>
+    <option value="Accounting">Accounting</option>
+    <option value="Communications">Communications</option>
+    <option value="Mathematics">Mathematics</option>
+    <option value="Finance">Finance</option>
+    <option value="Engineering">Engineering</option>
+    <option value="Business">Business</option>
+    <option value="Political science">Political science</option>
+    <option value="History">History</option>
+    <option value="Physics">Physics</option>
+    <option value="Chemistry">Chemistry</option>
+    <option value="Marketing">Marketing</option>
+    <option value="Mechanical Engineering">Mechanical Engineering</option>
+    <option value="Business administration">Business administration</option>
+    <option value="Sociology">Sociology</option>
+    <option value="Philosophy">Philosophy</option>
+    <option value="International Relations">International Relations</option>
+    <option value="Social science">Social science</option>
+    <option value="Anthropology">Anthropology</option>
+    <option value="Art">Art</option>
+    <option value="Biomedical Engineering">Biomedical Engineering</option>
+    <option value="Other">Other</option>
+  </select>
+        </div>
+        </br>
+             <div class="inputgroup">
+    <h6>GPA:</h6>
+    <input type="number" step="0.1" min="1" max="5" placeholder="GPA" name="GPA" required>
+    </div>
+        <div class="inputgroup">
+    <div>
+    <h6>Start Date:</h6>
+    <input type="date"  name="StartDate"/>
+    </div>
+    <div>
+    <h6>End Date:</h6>
+    <input type="date"  name="EndDate"/>
+    </div>
+        </div>
+    </br>
+  <h5>SPECIALIZED CERTIFICATES</h5>
+  <hr/>
+      <div class="inputgroup">
+    <h6>Certificate Field:</h6>
+    <input type="text" placeholder="certificate field" name="certificateField" maxlength="30"/>
+    </div>
+        <div class="inputgroup">
+    <h6>Score:</h6>
+    <input type="number" step="1" min="50" max="100" placeholder="certificate score" name="certificateScore" />
+    </div>
+    </div>
+<div class ="container1">
+  <h5>EXPERIENCE</h5>
+  <hr/>
+      <div class="inputgroup">
+    <h6>Job Title/Position:</h6>
+    <input type="text" placeholder="job title" name="jobTitle" maxlength="30" required/>
+    </div>
+        <div class="inputgroup">
+    <h6>Institution/Company:</h6>
+    <input type="text" placeholder="institution name" name="companyName" required/>
+    </div>
+    <div class="inputgroup">
+            <h6>Years Of Experience:</h6>
+        <input type="number" step="1" min="0" placeholder="years of experience" name="Eyear" >
+      </div>
+  <div class="inputgroup1">
+    <h6>Functions And Achievements:</h6>
+    <input type="text" placeholder="describe your achievements in this position" name="funAch">
+    </div>
+      <h5>SKILL </h5>
+    <hr/>
+  <div class="inputgroup1">
+        <p>Please separate skills with a comma</p>
+    <input type="text" placeholder="Enter skills" name="hSkill" required/>
+  </div>
+             <div class="inputgroup">
+    <h5>LANGUAGE </h5>
+    <hr/>
+    <h6>Language:</h6>
+  <select class="form-select" id="multiple-select-field6" name="lan" data-placeholder="Choose language"  required>
+    <option value="None">None</option>
+    <option value="Arabic">Arabic</option>
+   <option value="English">English</option>
+    <option value="Hindi">Hindi </option>
+    <option value="Spanish">Spanish </option>
+    <option value="French">French</option>
+    <option value="German">German</option>
+    <option value="Italian">Italian</option>
+    <option value="Portuguese">Portuguese</option>
+    <option value="Korean">Korean</option>
+    <option value="Chinese">Chinese</option>
+    <option value="Russian">Russian</option>
+    <option value="Turkish">Turkish</option>
+   <option value="Urdu">Urdu</option>
+    <option value="Bengali">Bengali</option>
+    <option value="Kirundi">Kirundi</option>
+    <option value="Greek">Greek</option>
+    <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+    <option value="Farsi">Farsi</option>
+    <option value="Tagalog">Tagalog</option>
+    <option value="Japanese">Japanese</option>
+    <option value="Punjabi">Punjabi</option>
+    <option value="Javanese">Javanese</option>
+    <option value="Telugu">Telugu</option>
+    <option value="Marathi">Marathi</option>
+    <option value="Other">Other</option>
+  </select>
+     <h6>Language Level:</h6>
+    <select class="form-select" id="multiple-select-field5"  data-placeholder="Choose major" name="lanLevel" required>
+    <option value="None">None</option>
+    <option value="1">A1- Beginner</option>
+    <option value="2">A2- Elementary</option>
+    <option value="3">B1 – Intermediate</option>
+    <option value="4">B2 – Upper-intermediate</option>
+    <option value="5">C1 – Advanced</option>
+    <option value="6">C2 – Proficiency</option>
+  </select>
+    </div>
+  </br>
+      <div class="inputgroup">
+    <h5>COURSES  </h5>
+    <hr/>
+    <h6>Course Title:</h6>
+     <input type="text" placeholder="course name" name="course" />
+    </div>
+        <div class="inputgroup">
+    <div>
+    <h6>Start Date:</h6>
+    <input type="date"  name="StartDate"/>
+    </div>
+    <div>
+    <h6>End Date:</h6>
+    <input type="date"  name="EndDate"/>
+    </div>
+        </div>
+        <div class="inputgroup1">
+    <h6>Description And Achievements: </h6>
+    <input type="text"  name="desOrAch" placeholder="describe your achievements in this course"/>
+  </div>
+        <div class="inputgroup1">
+    <h5>PERSONAL ACHIEVEMENTS</h5>
+    <hr/>
+    <input type="text"  name="perAchievements" placeholder="Optional"/>
+    </div>
+      <input class="nextBtn" type="submit" value="submit">
+    </div>
+  </form>
+<style>
+    body {
+        background-color: #FFFFFF;
+        color: #8F8E8E
+      }
+    *{
+      text-align: center;
+      font-family: Times;
+    }
+    h6{
+    color: #4D4C4C;
+    text-align: left;
+    font-family: Times;
+    }
+    input{
+    text-align: center;
+    }
+    .container{
+    text_align: center;
+    width: 400px;
+    height: 100px;
+    background-color: #FFFFFF
+    padding: 40px 40px;
+    text-align: left
+    font-family: poppins medium;
+    position: relative;
+    right: 350px;
+    }
+    .container1{
+    text_align: center;
+    width: 400px;
+    height: 100px;
+    background-color: #FFFFFF
+    padding: 40px 40px;
+    text-align: left;
+    font-family: poppins medium;
+    position: relative;
+    left: 790px;
+    top: -105px;
+    }
+    .inputgroup input{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 12px;
+    background: #ECECEC;
+    border: 1px black;
+    border-radius: 2px;
+    }
+    ::placeholder{
+    color: gray;
+    text-align: left;
+    }
+      .inputgroup1 input{
+       width: 100%;
+       height: 90px;
+       margin-bottom:12px;
+       background: #ECECEC;
+       border: 1px black;
+       border-radius: 2px;
+      }
+    .nextBtn{
+    margin: auto;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    width: 50%;
+    height: 40%;
+    padding: 5px 10px;
+    color: #FFF;
+    background: #A1C7C8;
+    display: block;
+    position: relative;
+    right: 310px;
+    top: 40px;
+    }
+</style>
+<script>
+  $( '#multiple-select-field1' ).select2( {
+      theme: "bootstrap-5",
+      width: $( this ).data( 'width' ) ? $( this ).data( 'width' ) : $( this ).hasClass( 'w-100' ) ? '100%' : 'style',
+      placeholder: $( this ).data( 'placeholder' ),
+      closeOnSelect: false,
+
+  } );
+  $( '#multiple-select-field2' ).select2( {
+    theme: "bootstrap-5",
+    width: $( this ).data( 'width' ) ? $( this ).data( 'width' ) : $( this ).hasClass( 'w-100' ) ? '100%' : 'style',
+    placeholder: $( this ).data( 'placeholder' ),
+    closeOnSelect: false,
+  } );
+  $( '#multiple-select-field3' ).select2( {
+    theme: "bootstrap-5",
+    width: $( this ).data( 'width' ) ? $( this ).data( 'width' ) : $( this ).hasClass( 'w-100' ) ? '100%' : 'style',
+    placeholder: $( this ).data( 'placeholder' ),
+    closeOnSelect: false,
+} );
+  $( '#multiple-select-field4' ).select2( {
+    theme: "bootstrap-5",
+    width: $( this ).data( 'width' ) ? $( this ).data( 'width' ) : $( this ).hasClass( 'w-100' ) ? '100%' : 'style',
+    placeholder: $( this ).data( 'placeholder' ),
+    closeOnSelect: false,
+} );
+  $( '#multiple-select-field5' ).select2( {
+    theme: "bootstrap-5",
+    width: $( this ).data( 'width' ) ? $( this ).data( 'width' ) : $( this ).hasClass( 'w-100' ) ? '100%' : 'style',
+    placeholder: $( this ).data( 'placeholder' ),
+    closeOnSelect: false,
+} );
+  $( '#multiple-select-field6' ).select2( {
+    theme: "bootstrap-5",
+    width: $( this ).data( 'width' ) ? $( this ).data( 'width' ) : $( this ).hasClass( 'w-100' ) ? '100%' : 'style',
+    placeholder: $( this ).data( 'placeholder' ),
+    closeOnSelect: false,
+} );
+</script>
+{% endblock %}

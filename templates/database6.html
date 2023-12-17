@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+   <body>
+
+   <table border = 1>
+         <thead>
+            <td>ID</td>
+            <td>jobt</td>
+            <td>candidatesNum</td>
+            <td>deg</td>
+            <td>major</td>
+            <td>University</td>
+            <td>GPA</td>
+            <td>cert</td>
+            <td>skill</td>
+            <td>exp</td>
+            <td>company</td>
+             <td>minYear</td>
+            <td>lan</td>
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["id"]}}</td>
+               <td>{{row["job"]}}</td>
+                <td>{{row["numCand"]}}</td>
+                <td>{{row["deg"]}}</td>
+                <td>{{row["maj"]}}</td>
+                <td>{{row["uni"]}}</td>
+                <td>{{row["GPA"]}}</td>
+                <td>{{row["certfi"]}}</td>
+               <td>{{row["skill"]}}</td>
+               <td>{{row["exper"]}}</td>
+                <td>{{row["company"]}}</td>
+                <td>{{row["minY"]}}</td>
+                <td>{{row["lang"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+
+      <a href = "/">Go back to home page</a>
+
+   </body>
+</html>

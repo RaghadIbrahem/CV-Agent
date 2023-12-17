@@ -1,0 +1,119 @@
+{% extends 'baseA.html'%}
+{% block title %}
+   upload CV
+{% endblock %}
+{% block content %}
+<h1 xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">Apply with CV</h1>
+    <div class ="container">
+        <form method="POST" action="UploadCV" enctype="multipart/form-data">
+        <div class="inputgroup">
+    <h6>To get a fair response for your application, please make sure that your CV contains all the following:</h6>
+            <h6>(Name, Job title, Email address, University, Major, Degree, GPA, Experience, Years of experience, Companies you worked at, Skills, Languages, Certificate)</h6>
+    </div>
+            My CV satisfied the conditions <input type="checkbox" id="myCheck" name="test">
+            </br>
+        <div class="inputgroup1">
+      <p><input type="file" name="file" required></p>
+            </br>
+        <p><input class="sub" type="submit" value="Submit" onclick="myFunction()"></p>
+        </div>
+</form>
+    </div>
+  <style>
+    body {
+        background-color: #FFFFFF;
+        color: #8F8E8E
+      }
+    *{
+      text-align: center;
+      font-family: Times;
+    }
+    h1{
+        text-align: center;
+        font-size: 55px;
+        font-family: Times;
+        position:relative;
+       right: 10px;
+       top: 30px;
+      }
+      h5{
+    color: #4D4C4C;
+    text-align: center;
+    }
+      p{
+        color: black;
+        text-align: left;
+        font-family: Times;
+      }
+     h6{
+        color: black;
+        font-size: 23px;
+        font-family: Times;
+      }
+    .container{
+    text_align: center;
+    width: 550px;
+    min-height: 400px;
+    background-color: #FFFFFF
+    padding: 40px 40px;
+    text-align: left
+    font-family: poppins medium;
+     position:relative;
+       right: 10px;
+       top: 40px;
+    }
+      .sub{
+       margin: auto;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    width: 33%;
+    height: 40%;
+    padding: 5px 10px;
+    color: #FFF;
+    background: #A1C7C8;
+    display: block;
+      }
+      .inputgroup1 input{
+       margin: auto;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    width: 50%;
+    height: 40%;
+    padding: 5px 10px;
+    color:#FFF
+    background: #A1C7C8;
+    display: block;
+      }
+      .inputgroup2 input{
+    width: 80%;
+    height: 40px;
+    margin-bottom: 12px;
+    background: #ECECEC;
+    border: 1px black;
+    border-radius: 2px;
+    position: relative;
+    left: 55px;
+    }
+
+      ::placeholder{
+      color: gray;
+      text-align: left;
+      }
+</style>
+<script>
+function myFunction() {
+  document.getElementById("myCheck").required = true;
+  document.getElementById("my").required = true;
+  document.getElementById("em").required = true;
+  document.getElementById("sk").required = true;
+  document.getElementById("de").required = true;
+  document.getElementById("un").required = true;
+  document.getElementById("GPA").required = true;
+  document.getElementById("year").required = true;
+  document.getElementById("Ex").required = true;
+  document.getElementById("com").required = true;
+}
+</script>
+{% endblock %}

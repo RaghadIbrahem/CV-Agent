@@ -1,0 +1,195 @@
+{% extends 'baseOutSB.html'%}
+{% block title %}
+ACTIVE POSITION
+{% endblock %}
+{% block content %}
+{% for row in rows %}
+<h1> ACTIVE POSITION# {{row[0]}}</h1>
+<p>View requirements of position# {{row.id}}</p>
+<form id="contact-form" name="contact" data-netlify="true" data-netlify-recaptcha="true" method = "POST" >
+   <div class="container">
+      <div class="inputgroup">
+        <h4>JOB TITLE:</h4>
+          <hr/>
+  <input class="form-select" id="multiple-select-field1"  name="job" value="{{row.job}}" disabled>
+    </div>
+      </br>
+      <div class="inputgroup">
+        <h4>CANDIDATES NUMBER:</h4>
+          <hr/>
+        <input type="number" step="1" min="0" name="CandidateNum" value="{{row.numCand}}" disabled>
+      </div>
+      <div class="inputgroup">
+              <h4> EDUCATION:</h4>
+    <div class="form-group">
+    </div>
+          </div>
+        <hr/>
+        <div class="inputgroup">
+<h6>Degree:</h6>
+  <input class="form-select" id="multiple-select-field2" name="deg" value="{{row.deg}}" disabled>
+        </div>
+     <div class="inputgroup">
+<h6>Major:</h6>
+  <input class="form-select" id="multiple-select-field3" name="maj" value="{{row.maj}}" disabled>
+        </div>
+        </br>
+     <div class="inputgroup">
+       <h6>University:</h6>
+       <input class="form-select" id="multiple-select-field4" name="uni" value="{{row.uni}}" disabled>
+      </div>
+    </br>
+      <div class="inputgroup">
+          <h6>Minimum GPA:</h6>
+        <input type="number" step="0.1" min="1" name="GPA" value="{{row.GPA}}" disabled>
+      </div>
+       <div class="inputgroup">
+    <h4>CERTIFICATE (IF ANY)</h4>
+    <hr/>
+       <h6>Certificate Field:</h6>
+    <input type="text" placeholder="certificate field" name="certificateField" maxlength="30" value="{{row.certfi}}" disabled/>
+    </div>
+   </div>
+<div class ="container1">
+              <h4>SKILLS:</h4>
+        <hr/>
+        <div class="inputgroup">
+            <p>Please separate skills with a comma</p>
+        <input type="text" name="skill" value="{{row.skill}}" disabled>
+      </div>
+              <h4>EXPERIENCE:</h4>
+        <hr/>
+        <div class="inputgroup">
+            <h6>Experience:</h6>
+        <input type="text" name="exp" value="{{row.exper}}" disabled>
+      </div>
+  <div class="inputgroup">
+            <h6>Institution/Company:</h6>
+        <input type="text" name="expCom" value="{{row.company}}" disabled>
+      </div>
+        <div class="inputgroup">
+            <h6>Minimum Years:</h6>
+        <input type="number" step="1" min="0"  name="minY" value="{{row.minY}}" disabled>
+      </div>
+    <div class="inputgroup">
+    <h4>LANGUAGE (IF ANY)</h4>
+    <hr/>
+            <h6>Language:</h6>
+        <input class="form-select" id="multiple-select-field" name="lang" value="{{row.lang}}" disabled >
+    </div>
+
+         <input class="nextBtn" type="button" onclick="window.location.href='{{ url_for('ActiveP')}}';" value="Back"/>
+    <input class="previousBtn" type="button" value="View Candidates List" onclick="window.location.href='{{ url_for('CandL')}}';"/>
+    {% endfor%}
+</div>
+    </form>
+<style>
+      body {
+        background-color: #FFFFFF;
+        color: #8F8E8E
+      }
+      * {
+      text-align: center;
+
+      }
+      h4{
+        color: #8E8C87;
+        text-align: left;
+       font-family: Times;
+      }
+      h6{
+        color: #4D4C4C;
+        text-align: left;
+        font-family: Times;
+      }
+      input{
+        text-align: center;
+      }
+    .container{
+    text_align: center;
+    width: 400px;
+    height: 100px;
+    background-color: #FFFFFF
+    padding: 40px 40px;
+    text-align: left
+    font-family: poppins medium;
+    position: relative;
+    right: 350px;
+    top: 32px;
+    }
+    .container1{
+    text_align: center;
+    width: 400px;
+    height: 100px;
+    background-color: #FFFFFF
+    padding: 40px 40px;
+    text-align: left;
+    font-family: poppins medium;
+    position: relative;
+    left: 730px;
+    top: -70px;
+    }
+      .inputgroup input{
+       width: 100%;
+       height: 40px;
+       margin-bottom:12px;
+       background: #ECECEC;
+       border: 1px black;
+       border-radius: 2px;
+      }
+      .inputgroup1 input{
+       width: 100%;
+       height: 100px;
+       margin-bottom:12px;
+       background: #ECECEC;
+       border: 1px black;
+       border-radius: 2px;
+      }
+      ::placeholder{
+      color: gray;
+      text-align: left;
+      }
+
+      .nextBtn{
+       float: left;
+       margin: auto;
+       font-size: 1.2rem;
+       border: none;
+       border-radius: 10px;
+       width: 40%;
+       height: 40px;
+       padding: 5px 10px;
+       color: #FFF;
+       background: #A1C7C8;
+       display: block;
+      }
+       .previousBtn{
+       float: right;
+       margin: auto;
+       font-size: 1.2rem;
+       border: none;
+       border-radius: 10px;
+       width: 50%;
+       height: 40px;
+       padding: 5px 10px;
+       color: #FFF;
+       background: #A1C7C8;
+       display: block;
+      }
+     input[class="form-control"]{
+  width: 20%;
+  height:20%;
+  font-size: 1.2rem;
+  align:right
+  padding: 19px 20px;
+    display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  box-sizing: border-box;
+text-align: center;
+background-color: #f6766f;
+  float: right;
+  margin-left: 230px;
+      }
+</style>
+{% endblock %}

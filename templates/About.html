@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h6 {
+            color: #666;
+        }
+    </style>
+    <title>About Us</title>
+</head>
+
+<body>
+
+    {% extends 'baseRS.html'%}
+    {% block title %}
+    About Us
+    {% endblock %}
+    {% block content %}
+    <section>
+        <h1>Who are we?</h1>
+        <h6>CV-Agent is an intelligent tool that aims to...</h6>
+        <!-- Add more content as needed -->
+    </section>
+    {% endblock %}
+
+</body>
+
+</html>
